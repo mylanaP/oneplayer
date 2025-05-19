@@ -1,7 +1,7 @@
 var options1 = {
     chart: {
       type: 'radialBar',
-      height: 300,
+      height: 250,
       width: '100%',
       sparkline: { enabled: true },
     },
@@ -9,8 +9,8 @@ var options1 = {
         padding: {
           top: -10,
           bottom: 10,
-          left: -10,   // ✅ this is key!
-          right: -10   // ✅ stretch chart width
+          left: -25,   
+          right: -25
         }
       },
     plotOptions: {
