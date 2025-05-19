@@ -30,7 +30,7 @@ var options1 = {
             show: false,
           },
           value: {
-            offsetY: -40,
+            offsetY: -35,
             fontSize: '28px',
             fontWeight: 500,
             fontFamily: 'SUSE',
