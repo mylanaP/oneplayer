@@ -1,0 +1,27 @@
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-25- {
+    margin-top: -25px;
+}
+
+.mt-15- {
+    margin-top: -15px;
+}
+
+.pt-10 {
+    padding-top: 10px;
+}
+
+.pb-10 {
+    padding-bottom: 10px;
+}
+
+.line-height-140 {
+    line-height: 140%;
+}
+
+.border-light-gray {
+    border: 1px solid rgba(0, 0, 0, 0.02);
+}
