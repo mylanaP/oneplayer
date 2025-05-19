@@ -1,0 +1,56 @@
+<!DOCTYPE html> 
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Login - OPNPlay</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="/favicon.png">
+		<link href="./assets/css/standard.css" rel="stylesheet">
+        <link href="./assets/css/login.css" rel="stylesheet">
+
+		<!-- Bootstrap JS and dependencies -->
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	</head>
+	<body>
+        <div class="wrapper min-h-100 login-custom-container">
+            <div class="d-flex align-items-center justify-content-center">
+                <img src="./assets/png/opn_logo.png" alt="Opn Logo" class="" />
+            </div>
+            <div class="d-flex justify-content-end mt-3 px-xxl-83">
+                <div class="d-flex flex-column bg-white p-xxl-80 gap-xxl-40 radius-xxl-20">
+                    <span class="fw-bold text-xxl-32">Welcome</span>
+                    <form action="#" method="POST" class="d-flex flex-column gap-xxl-20">
+                        <div class="form-group d-flex flex-column gap-2 min-w-xxl-560">
+                            <label class="fw-medium text-xxl-16" for="email">Email</label>
+                            <input class="radius-8 text-xxl-16 p-xxl-20 border-gray" type="email" id="email" name="email" placeholder="Type Your Email" required>
+                        </div>
+                        <div class="form-group d-flex flex-column gap-2 min-w-xxl-560">
+                            <label class="fw-medium text-xxl-16" for="pwd">Password</label>
+                            <input class="radius-8 text-xxl-16 p-xxl-20 border-gray" type="password" id="pwd" name="pwd" placeholder="••••••••••••••••••••" required>
+                        </div>
+                        <div class="form-group d-flex flex-row justify-content-between align-items-center">
+                            <div class="d-flex flex-row align-items-center justify-content-center gap-2">
+                                <input class="text-xxl-16 p-xxl-20 border-checkbox-gray" type="checkbox" id="remember" name="remember">
+                                <label class="fw-normal text-xxl-16 text-cyan-black" for="remember">Remember Me</label>
+                            </div>
+                            <div class="d-flex flex-row align-items-center justify-content-center gap-2">
+                                <span class="text-xxl-16 text-gray">Forgot your password?</span>
+                                <a href="#" class="text-decoration-none text-cyan-aqua">Reset</a>
+                            </div>
+                        </div>
+                    </form>
+                    <span class="text-center text-xxl-9 text-gray">© Copyright 2024, All Rights Reserved</span>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>
