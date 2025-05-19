@@ -102,6 +102,11 @@ var options1 = {
       height: 80,
       sparkline: { enabled: true }
     },
+    grid: {
+        padding: {
+          bottom: 1,
+        }
+      },
     series: [{
       name: 'CMJ',
       data: [1.8, 2.1, 1.8, 2.0, 1.9, 2.2, 1.75]
@@ -124,12 +129,52 @@ var options1 = {
 
   var minutesPlayedChart = new ApexCharts(document.querySelector("#chart-load-management-minutes-played"), options1);
   var totalDistanceChart = new ApexCharts(document.querySelector("#chart-load-management-total-distance"), options1);
-  var accelerationsChart = new ApexCharts(document.querySelector("#chart-load-management-accelerations"), {...options1, colors: ['#E58485'], series: ['90']});
-  var decelerationsChart = new ApexCharts(document.querySelector("#chart-load-management-decelerations"), {...options1, colors: ['#E5CB84'], series: ['50']});
+  var accelerationsChart = new ApexCharts(
+    document.querySelector("#chart-load-management-accelerations"),
+    {
+      ...options1,
+      series: [90],
+      colors: ['#E58485'],
+      plotOptions: {
+        radialBar: {
+          ...options1.plotOptions?.radialBar, // keep original settings
+          track: {
+            ...options1.plotOptions?.radialBar?.track,
+            background: '#FAE6E7'
+          }
+        }
+      }
+    }
+  );
+  var decelerationsChart = new ApexCharts(document.querySelector("#chart-load-management-decelerations"), {...options1, colors: ['#E5CB84'], series: ['50'], plotOptions: {
+    radialBar: {
+      ...options1.plotOptions?.radialBar, // keep original settings
+      track: {
+        ...options1.plotOptions?.radialBar?.track,
+        background: '#FAF5E6'
+      }
+    }
+  }});
   var zonePlayedChart = new ApexCharts(document.querySelector("#chart-load-management-zone-distance"), options1);
   var hsrDistanceChart = new ApexCharts(document.querySelector("#chart-load-management-hsr"), options1);
-  var sprintChart = new ApexCharts(document.querySelector("#chart-load-management-sprint-distance"), {...options1, colors: ['#E58485'], series: ['90']});
-  var metresChart = new ApexCharts(document.querySelector("#chart-load-management-metres-per-min"), {...options1, colors: ['#E58485'], series: ['90']});
+  var sprintChart = new ApexCharts(document.querySelector("#chart-load-management-sprint-distance"), {...options1, colors: ['#E58485'], series: ['90'],  plotOptions: {
+    radialBar: {
+      ...options1.plotOptions?.radialBar, // keep original settings
+      track: {
+        ...options1.plotOptions?.radialBar?.track,
+        background: '#FAE6E7'
+      }
+    }
+  }});
+  var metresChart = new ApexCharts(document.querySelector("#chart-load-management-metres-per-min"), {...options1, colors: ['#E58485'], series: ['90'],  plotOptions: {
+    radialBar: {
+      ...options1.plotOptions?.radialBar, // keep original settings
+      track: {
+        ...options1.plotOptions?.radialBar?.track,
+        background: '#FAE6E7'
+      }
+    }
+  }});
 
   minutesPlayedChart.render();
   totalDistanceChart.render();
