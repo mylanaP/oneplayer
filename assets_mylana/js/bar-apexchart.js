@@ -9,7 +9,7 @@ var options1 = {
         padding: {
           top: -10,
           bottom: 10,
-          left: -25,   
+          left: -25,
           right: -25
         }
       },
@@ -50,83 +50,84 @@ var options1 = {
     colors: ['#84E5D3'] // teal; adjust per stat
   };
 
-  var progress_Options = {
-    chart: {
-      type: 'radialBar',
-      height: 80,
-      width: 80,
-      sparkline: { enabled: true }
+var progress_Options = {
+  chart: {
+    type: 'radialBar',
+    height: 80,
+    width: 80,
+    sparkline: { enabled: true }
+  },
+  grid: {
+      padding: {
+        top: 4,
+      }
     },
-    grid: {
-        padding: {
-          top: 4,
-        }
+  plotOptions: {
+    radialBar: {
+      startAngle: 0,
+      endAngle: 360,
+      track: {
+        background: '#f1f1f1',
+        strokeWidth: '100%',
       },
-    plotOptions: {
-      radialBar: {
-        startAngle: 0,
-        endAngle: 360,
-        track: {
-          background: '#f1f1f1',
-          strokeWidth: '100%',
-        },
-        hollow: {
-          size: '40%'
-        },
-        dataLabels: {
-          name: { show: false },
-          value: {
-            show: true,
-            fontSize: '12px',
-            fontFamily: "SUSE",
-            fontWeight: 600,
-            offsetY: 3,
-            formatter: function (val) {
-              return Math.round(val);
-            }
+      hollow: {
+        size: '40%'
+      },
+      dataLabels: {
+        name: { show: false },
+        value: {
+          show: true,
+          fontSize: '12px',
+          fontFamily: "SUSE",
+          fontWeight: 600,
+          offsetY: 3,
+          formatter: function (val) {
+            return Math.round(val);
           }
         }
       }
-    },
-    stroke: {
-      lineCap: 'butt',      // flat edges
-      dashArray: 2         // ✅ creates dash effect
-    },
-    series: [68],           // value (percentage)
-    colors: ['#E5CB84']     // turquoise/cyan like the image
-  };
-
-  var cmj_Options = {
-    chart: {
-      type: 'area',
-      height: 80,
-      sparkline: { enabled: true }
-    },
-    grid: {
-        padding: {
-          bottom: 1,
-        }
-      },
-    series: [{
-      name: 'CMJ',
-      data: [1.8, 2.1, 1.8, 2.0, 1.9, 2.2, 1.75]
-    }],
-    stroke: {
-      curve: 'smooth',
-      width: 2,
-      colors: ['#EF5350']
-    },
-    fill: {
-      type: 'solid',
-      opacity: 0.2,
-      colors: ['#E58485']
-    },
-    tooltip: {
-      enabled: false
     }
-  };
-  
+  },
+  stroke: {
+    lineCap: 'butt',      // flat edges
+    dashArray: 2         // ✅ creates dash effect
+  },
+  series: [68],           // value (percentage)
+  colors: ['#E5CB84']     // turquoise/cyan like the image
+};
 
+var cmj_Options = {
+  chart: {
+    type: 'area',
+    height: 80,
+    sparkline: { enabled: true }
+  },
+  grid: {
+      padding: {
+        bottom: 1,
+      }
+    },
+  series: [{
+    name: 'CMJ',
+    data: [1.8, 2.1, 1.8, 2.0, 1.9, 2.2, 1.75]
+  }],
+  stroke: {
+    curve: 'smooth',
+    width: 2,
+    colors: ['#EF5350']
+  },
+  fill: {
+    type: 'solid',
+    opacity: 0.2,
+    colors: ['#E58485']
+  },
+  tooltip: {
+    enabled: false
+  }
+};
+
+
+$(document).ready(() => {
   var minutesPlayedChart = new ApexCharts(document.querySelector("#chart-load-management-minutes-played"), options1);
   var totalDistanceChart = new ApexCharts(document.querySelector("#chart-load-management-total-distance"), options1);
   var accelerationsChart = new ApexCharts(
@@ -230,3 +231,4 @@ var options1 = {
   cmjChart6.render();
   cmjChart7.render();
   cmjChart8.render();
+});
