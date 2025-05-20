@@ -125,3 +125,8 @@ a.bg-custom-brand:hover {
 .btn-danger:hover {
   background: #9A4748;
 }
+
+tr:hover td {
+  border-bottom: 1px solid #D9F7F1;
+  background: #ECFBF8 !important;
+}
