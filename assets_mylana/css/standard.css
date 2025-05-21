@@ -196,38 +196,16 @@ tr:hover td {
 .gap-18 {
   gap: 18px;
 }
-.empty-performance-data-img {
-flex-shrink: 0;
-}
-.empty-performance-data-desc {
-display: flex;
-padding: 40px;
-flex-direction: column;
-align-items: flex-start;
-gap: 20px;
-flex: 1 0 0;
-align-self: stretch;
-border-radius: 20px 0px 0px 0px;
-background: #F8F8FC;
-}
+
 .empty-field {
-  display: none !important;
+  display: none;
 }
-.no-training-notification-img {
-flex-shrink: 0;
+
+.min-h-290 {
+min-height: 290px;
 }
-.no-training-notification-desc {
-display: flex;
-flex-direction: column;
-align-items: center;
-gap: 18px;
-align-self: stretch;
-}
-.no-load-management {
-  display: flex;
-align-items: center;
-flex: 1 0 0;
-align-self: stretch;
+.min-h-370 {
+  min-height: 370px;
 }
 .no-data-img {
   flex-shrink: 0;
