@@ -198,7 +198,7 @@ tr:hover td {
 }
 
 .empty-field {
-  display: none;
+  display: none !important;
 }
 
 .min-h-290 {

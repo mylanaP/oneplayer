@@ -226,52 +226,58 @@
 
 				<!-- Content Area -->
 				<!-- status -->
-                <div class="d-flex flex-column custom-card gap-20 border-0">
-                    <div class="d-grid">
-                        <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick max-height-45 rounded-2">
-            							<option selected>Last 7 Days</option>
-            							<option>One</option>
-            							<option>Two</option>
-            							<option value="3">Three</option>
-            						</select>
-                    </div>
-                    <div class="d-grid grid-col-4 gap-12">
-                        <div class="d-flex flex-column justify-content-center bg-mini-card-cyan-success  px-20 py-20 radius-12">
-                            <span class="fw-medium text-center text-16 text-neutral line-height-140 mb-20">Total min. played</span>
-                            <span class="fw-extrabold text-center text-40 text-teal line-height-100">
-                                849
-                            </span>
-							<span class="text-20 text-cyan-success text-center">+24%</span>
-                        </div>
-						<div class="d-flex flex-column justify-content-center bg-mini-card-cyan-success  px-20 py-20 radius-12">
-                            <span class="fw-medium text-center text-16 text-neutral line-height-140 mb-20">Games</span>
-                            <span class="fw-extrabold text-center text-40 text-teal line-height-100">
-                                10
-                            </span>
-							<span class="text-20 text-cyan-success text-center">(90%)</span>
-                        </div>
-						<div class="d-flex flex-column justify-content-center bg-mini-card-cyan-success  px-20 py-20 radius-12">
-                            <span class="fw-medium text-center text-16 text-neutral line-height-140 mb-1">On Pitch<br>Sessions Compl.</span>
-                            <span class="fw-extrabold text-center text-40 text-teal line-height-100 mb-1">
-                                39
-                            </span>
+        <div class="d-flex flex-column custom-card gap-20 border-0">
+          <div class="d-grid">
+            <select class="w-100 d-flex align-items-center bg-white text-12 text-select-primary selectpicker show-tick max-height-45 rounded-2">
+  						<option selected>Last 7 Days</option>
+  						<option>One</option>
+  						<option>Two</option>
+  						<option value="3">Three</option>
+  					</select>
+          </div>
+          <div class="d-none grid-col-4 gap-12">
+            <div class="d-flex flex-column justify-content-center bg-mini-card-cyan-success  px-20 py-20 radius-12">
+              <span class="fw-medium text-center text-16 text-neutral line-height-140 mb-20">Total min. played</span>
+              <span class="fw-extrabold text-center text-40 text-teal line-height-100">
+                  849
+              </span>
+							  <span class="text-20 text-cyan-success text-center">+24%</span>
+            </div>
+						  <div class="d-flex flex-column justify-content-center bg-mini-card-cyan-success  px-20 py-20 radius-12">
+              <span class="fw-medium text-center text-16 text-neutral line-height-140 mb-20">Games</span>
+              <span class="fw-extrabold text-center text-40 text-teal line-height-100">10</span>
+							  <span class="text-20 text-cyan-success text-center">(90%)</span>
+            </div>
+						  <div class="d-flex flex-column justify-content-center bg-mini-card-cyan-success  px-20 py-20 radius-12">
+              <span class="fw-medium text-center text-16 text-neutral line-height-140 mb-1">On Pitch<br>Sessions Compl.</span>
+              <span class="fw-extrabold text-center text-40 text-teal line-height-100 mb-1">39</span>
 							<span class="text-20 text-cyan-success text-center line-height-80">(90%)</span>
-                        </div>
+          </div>
 						<div class="d-flex flex-column justify-content-center bg-mini-card-cyan-success  px-20 py-20 radius-12">
-                            <span class="fw-medium text-center text-16 text-neutral line-height-140 mb-1">S&C Sessions<br>Completed</span>
-                            <span class="fw-extrabold text-center text-40 text-teal line-height-100 mb-1">
-                                22
-                            </span>
+                  <span class="fw-medium text-center text-16 text-neutral line-height-140 mb-1">S&C Sessions<br>Completed</span>
+                  <span class="fw-extrabold text-center text-40 text-teal line-height-100 mb-1">
+                      22
+                  </span>
 							<span class="text-20 text-cyan-success text-center line-height-80">(80%)</span>
-                        </div>
-                    </div>
-                </div>
+              </div>
+          </div>
+          <div class="d-flex align-items-start justify-content-start ">
+            <div class="no-data-img">
+              <img src="./assets_mylana/png/no-performance-data.png">
+            </div>
+            <div class="d-flex flex-column justify-content-center align-items-start align-self-stretch gap-18">
+              <div class="text-24">No Performance Data Yet</div>
+              <div class="text-16">These statistics will populate once training, match, and recovery sessions are logged.</div>
+              <div class="btn btn-white ulg px-32 py-20"> Import Player Data</div>
+            </div>
+          </div>
+        </div>
 
 				<div class="d-flex gap-12">
 					<div class="col-4 d-flex flex-column gap-20">
 						<div class="bg-white custom-card p-20 gap-20 radius-12">
 							<span class="fw-medium text-20 ">Training Notifications</span>
-							<div class="d-flex flex-column gap-2 max-height-322 custom-tab-content mt-32">
+							<div class="d-none flex-column gap-2 max-height-322 custom-tab-content mt-32">
 								<button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12" data-bs-toggle="modal" data-bs-target="#report-issue-modal">
 									<div class="d-flex align-items-center gap-12">
 										<div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
@@ -434,6 +440,13 @@
 										<span class="d-flex fw-bold align-items-center bg-custom-error max-height-35 text-14 text-cyan-error radius-5 px-1 border-light-gray">Load Management</span>
 									</div>
 								</button>
+							</div>
+							<div class="d-flex align-items-center justify-content-center flex-column ">
+							  <div class="no-data-img"><img src="./assets_mylana/png/empty-training-notification.png"></div>
+							  <div class="d-flex flex-column gap-18 justify-content-center align-items-center align-self-stretch">
+                  <div class="text-24">No Training Notifications</div>
+                  <div class="text-14">Any training-related alerts such as S&C changes, rehab updates, and session issues will appear here.</div>
+							  </div>
 							</div>
 						</div>
 						<div class="bg-white custom-card p-20 gap-20 radius-12 flex-grow-1">
@@ -444,7 +457,7 @@
 									<img src="./assets/svg/icon-line-arrow-forward-btn.svg" class="w-12 h-12" alt="Icon Line Arrow Forward">
 								</a>
 							</div>
-							<div class="d-flex flex-column gap-2 max-height-322 custom-tab-content mt-20">
+							<div class="d-none flex-column gap-2 max-height-322 custom-tab-content mt-20">
 								<button type="button" class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12" data-bs-toggle="modal" data-bs-target="#report-issue-modal">
 									<div class="d-flex align-items-center gap-12">
 										<div class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
@@ -616,6 +629,15 @@
 									</div>
 								</button>
 							</div>
+
+							<div class="d-flex flex-column align-items-center align-self-stretch ">
+							  <div class="no-data-img"><img src="./assets_mylana/png/empty-training-notification.png"></div>
+							  <div class="d-flex flex-column align-items-center gap-18 align-self-stretch">
+							    <div class="text-24">No Recovery Scores Available</div>
+							    <div class="text-14">You haven’t logged any recovery data yet. Scores will display once players complete their recovery inputs.</div>
+							    <div class="btn btn-white md">Recovery</div>
+							  </div>
+							</div>
 						</div>
 					</div>
 
@@ -624,7 +646,7 @@
 							<div class="d-flex justify-content-between align-items-center">
 								<span class="fw-medium text-20">Load Management</span>
 								<div class="d-flex gap-12">
-									<span class="d-flex align-items-center bg-custom-brand my-auto py-12 px-20 border-tab-empty radius-8 text-white text-12 box-shadow-primary">
+									<span data-bs-toggle="modal" data-bs-target="#load-management-modal" class="btn btn-default my-auto text-12 box-shadow-primary">
 										Load Management &nbsp; <img src="./assets_mylana/svg/arrow-right-white.svg" class="w-12 h-12" alt="Icon Line Arrow Forward">
 									</span>
 									<a href="#" class="btn btn-white btn-md px-2 ">
@@ -632,7 +654,7 @@
 									</a>
 								</div>
 							</div>
-							<div class="row mt-12 px-2">
+							<div class="d-none row mt-12 px-2">
 								<div class="col-md-3 px-2 pt-2">
 									<div class="custom-card chart-card pt-12 pb-20 radius-12">
 										<div class="text-center text-black">Minutes Played</div>
@@ -809,21 +831,29 @@
 									  </div>
 									</div>
 								</div>
+							</div>
+							<div class="d-flex justify-content-center align-items-center align-self-stretch min-h-290 ">
+							  <div class="no-data-img"><img src="./assets_mylana/png/no-load-management.png"></div>
+							  <div class="d-flex flex-column justify-content-center align-items-start align-self-stretch gap-18">
+							    <div class="text-24">No Load Data</div>
+  							  <div class="text-14">Load metrics such as distance, accelerations, and high-speed running will appear after performance sessions are tracked.</div>
+  							  <div class="btn btn-default btn-md">Load Management</div>
 							  </div>
+							</div>
 						</div>
 						<div class="bg-white custom-card p-20 gap-20 radius-12">
 							<div class="d-flex justify-content-between align-items-center">
 								<span class="fw-medium text-20">Athletic Profiles</span>
 								<div class="d-flex gap-12">
-									<a href="#" class="d-flex align-items-center bg-custom-brand my-auto py-12 px-20 border-tab-empty radius-8 text-white text-12 box-shadow-primary">
+									<span class="btn btn-default my-auto py-12 px-20 text-12 box-shadow-primary" data-bs-toggle="modal" data-bs-target="#athletic-profiles-modal">
 										Athletic Profiles &nbsp; <img src="./assets_mylana/svg/arrow-right-white.svg" class="w-12 h-12" alt="Icon Line Arrow Forward">
-									</a>
+									</span>
 									<a href="#" class="btn btn-white btn-md px-2 ">
 										<img src="./assets/svg/icon-edit.svg" class="w-12 h-12" alt="Icon Line Arrow Forward">
 									</a>
 								</div>
 							</div>
-							<div class="row mt-12">
+							<div class="d-none row mt-12">
 								<div class="col-md-3 px-8px pt-2">
 									<div class="custom-card chart-card pt-12 pb-0 px-0 radius-12 overflow-hidden">
 										<div class="d-flex flex-column gap-1 px-20">
@@ -1006,15 +1036,27 @@
 									</div>
 								</div>
 							</div>
+							<div class="d-flex justify-content-center align-items-center align-self-stretch min-h-370 ">
+							  <div class="no-data-img"><img src="./assets_mylana/png/no-athetic-profiles.png"></div>
+							  <div class="d-flex flex-column justify-content-center align-items-start align-self-stretch gap-18">
+							    <div class="text-24">No Athletic Profiles Set</div>
+  							  <div class="text-14">This section displays performance benchmarks like strength, power, and speed. Add test results to begin tracking athlete development.</div>
+  							  <div class="btn btn-default btn-md">Athletic Profiles</div>
+							  </div>
+							</div>
 						</div>
 					</div>
-
-
 				</div>
 
+        <div class="d-flex flex-column align-items-center align-self-stretch ">
+          <div class="no-data-img"><img src="assets_mylana/png/empty-training-notification.png"></div>
+          <div class="d-flex flex-column gap-18 align-items-center justify-content-center align-self-stretch">
+            <div class="text-24">No Players Tracked</div>
+            <div class="text-14">his dashboard view will show all athletes’ physical performance once player profiles are added and data is tracked.</div>
+          </div>
+        </div>
 
-
-				<div class="d-flex custom-card table-container radius-12">
+				<div class="d-none custom-card table-container radius-12">
 					<table class="table sortable-table mb-0">
 						<thead>
 							<tr>
@@ -1735,7 +1777,6 @@
 					</table>
 				</div>
 			</div>
-
 		</div>
 
 		<!-- Notification Modal -->
@@ -2253,8 +2294,206 @@
 		</div>
 
 		<div class="modal" id="load-management-modal">
+		  <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
 		  <div class="modal-dialog modal-lead-management modal-dialog-scrollable">
-		    <div class="modal-content d-flex flex-column h-100 gap-20 p-20 w-587 h-702 radius-12">
+		    <div class="modal-content d-flex flex-column gap-40 p-40 w-960 h-702 radius-12">
+		      <div class="d-flex align-items-center justify-content-between">
+						<div class="text-32">Set Load Management Metrics</div>
+            <span class="btn btn-default btn-md">Set</span>
+
+					</div>
+          <div class="d-flex flex-column gap-40 overflow-y-auto">
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">1</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Integration</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">2</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Integration</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">3</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Integration</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">4</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Integration</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">5</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Integration</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">6</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Integration</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">7</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Integration</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">8</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Integration</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+          </div>
+		    </div>
+		  </div>
+		</div>
+
+		<div class="modal" id="athletic-profiles-modal">
+		  <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+		  <div class="modal-dialog modal-lead-management modal-dialog-scrollable">
+		    <div class="modal-content d-flex flex-column gap-40 p-40 w-960 h-702 radius-12">
+		      <div class="d-flex align-items-center justify-content-between">
+						<div class="text-32">Set Athletic Profile Metrics</div>
+            <span class="btn btn-default btn-md">Set</span>
+					</div>
+          <div class="d-flex flex-column gap-40 overflow-y-auto">
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">1</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Data Group</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">2</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Data Group</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">3</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Data Group</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">4</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Data Group</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">5</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Data Group</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">6</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Data Group</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">7</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Data Group</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+            <div class="d-flex align-items-start align-self-stretch gap-24">
+              <div class="d-flex flex-column align-items-center load-metric-seq text-14 text-white">8</div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span class="text-16">Data Group</span>
+                <input type="text" class="form-control text-16 p-20 line-height-140">
+              </div>
+              <div class="d-flex flex-column align-items-start flex-grow-1 gap-8">
+                <span>Data Point</span>
+                <input type="text" class="form-control p-20 line-height-140">
+              </div>
+            </div>
+          </div>
 		    </div>
 		  </div>
 		</div>
