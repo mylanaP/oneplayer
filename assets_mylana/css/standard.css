@@ -59,7 +59,6 @@ a.bg-custom-brand:hover {
   background-color: #1A3832 !important;
 }
 
-/* commented - mylana
 .mini-card-bg-gradient:hover {
   border: 1px solid #DCDCDC;
   background: linear-gradient(0deg, #FFF 4.99%, #F5F6FB 67.31%);
@@ -71,7 +70,7 @@ a.bg-custom-brand:hover {
   background: linear-gradient(202deg, #FFF 25.35%, #F5F6FB 92.26%);
   box-shadow: 0px 8px 12px 0px rgba(68, 68, 99, 0.07);
 }
-*/
+
 .btn, .btn-md {
   display: flex;
   justify-content: center;
@@ -79,6 +78,8 @@ a.bg-custom-brand:hover {
   gap: 4px;
   padding: 12px 20px;
   border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
 }
 
 .btn-sm {
@@ -86,28 +87,36 @@ a.bg-custom-brand:hover {
   border-radius: 6px;
 }
 
-.btn-md {
-  padding: 12px 20px;
-  border-radius: 8px;
-}
-
 .btn-lg {
   padding: 20px 32px;
+  font-size: 16px;
+}
+.btn-lg svg {
+  width: 16px;
+  height: 16px;
 }
 
 .btn-ulg {
   padding: 24px 40px;
+  font-size: 20px;
+}
+.btn-ulg svg {
+  width: 16px;
+  height: 16px;
 }
 
 .btn-default {
+  color: #FFF;
   background: #3A6860;
 }
 
 .btn-default:hover {
+  color: #fff;
   background: #20463E;
 }
 
 .btn-white {
+  color: #0C0C0D;
   border: 1px solid #F0F3F7;
   background: #FFF;
   box-shadow: 0px 8px 12px 0px rgba(68, 68, 99, 0.07);
@@ -118,20 +127,36 @@ a.bg-custom-brand:hover {
   background: linear-gradient(202deg, #FFF 25.35%, #F5F6FB 92.26%);
   box-shadow: 0px 8px 12px 0px rgba(68, 68, 99, 0.07);
 }
-
+.btn-white svg path {
+  stroke: #0C0C0D;
+}
 .btn-danger {
+  color: #fff;
   background: #D26163;
 }
-
+.btn-danger svg path {
+  stroke: #fff;
+}
 .btn-danger:hover {
   background: #9A4748;
 }
-/* commented - mylana
+.btn-hover {
+  color: #fff;
+  background: #20463E;
+}
+.btn-white-hover {
+  border: 1px solid #DCDCDC;
+  background: linear-gradient(202deg, #FFF 25.35%, #F5F6FB 92.26%);
+  box-shadow: 0px 8px 12px 0px rgba(68, 68, 99, 0.07);
+}
+.btn-danger-hover {
+  background: #9A4748;
+}
 tr:hover td {
   border-bottom: 1px solid #D9F7F1;
   background: #ECFBF8 !important;
 }
-*/
+
 
 #player-medical-tab .nav-link:hover {
 	color: #0C0C0D;
@@ -143,4 +168,45 @@ tr:hover td {
 #player-medical-tab .nav-link.active:hover {
 	color: white !important;
 	background: #20463E;
+}
+
+.modal .modal-lead-management {
+  padding: 40px;
+}
+
+/** begin gap */
+.gap-24 {
+  gap: 24px;
+}
+/** end gap */
+
+.load-metric-seq {
+  width: 40px;
+  height: 97px;
+  padding: 9.977px 0px 61.023px 0px;
+  border-radius: 4.799px;
+  background: #CCDDDA;
+}
+
+#load-management-modal .btn-close, #athletic-profiles-modal .btn-close {
+  top: 40px;
+  right: 40px;
+  --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
+}
+.gap-18 {
+  gap: 18px;
+}
+
+.empty-field {
+  display: none;
+}
+
+.min-h-290 {
+min-height: 290px;
+}
+.min-h-370 {
+  min-height: 370px;
+}
+.no-data-img {
+  flex-shrink: 0;
 }

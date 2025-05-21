@@ -127,7 +127,7 @@ var cmj_Options = {
 };
 
 
-$(document).ready(() => {
+$(document).ready(function() {
   var minutesPlayedChart = new ApexCharts(document.querySelector("#chart-load-management-minutes-played"), options1);
   var totalDistanceChart = new ApexCharts(document.querySelector("#chart-load-management-total-distance"), options1);
   var accelerationsChart = new ApexCharts(
