@@ -245,6 +245,10 @@ tr:hover td {
   min-height: 433px;
 }
 
+.min-h-840 {
+  min-height: 840px;
+}
+
 .min-h-24 {
   min-height: 24px;
 }
@@ -442,7 +446,6 @@ select option.text-16 {
   text-underline-position: from-font;
 }
 .custom-card-content {
-  display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
