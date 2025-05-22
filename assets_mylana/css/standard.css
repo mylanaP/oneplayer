@@ -215,7 +215,8 @@ tr:hover td {
 }
 
 #load-management-modal .btn-close,
-#athletic-profiles-modal .btn-close {
+#athletic-profiles-modal .btn-close,
+.modal.fullpage .btn-close {
   top: 40px;
   right: 40px;
   --bs-btn-close-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e");
@@ -312,9 +313,37 @@ select option.text-16 {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  font-size: 16px;
   border-radius: 5px;
   border: 1px solid rgba(0, 0, 0, 0.02);
   background: #F3F3F3;
+}
+.tag.success {
+  padding: 12px;
+  color: #84E5D3;
+  background: #F5FDFB;
+}
+.tag.purple {
+  color: #9684E5;
+  background: #F6F5FD;
+  padding: 12px;
+}
+.tag.add-btn {
+  font-size: 12px;
+  color: #8B8B8B;
+  display: flex;
+  padding: 4px;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
+  border-radius: 6px;
+  border: 1px solid #F3F3F3;
+  background: #FFF;
+}
+.tag.add-btn svg {
+  width: 9px;
+  height: 9px;
 }
 .player-info {
   border-radius: 12px;
@@ -459,4 +488,65 @@ select option.text-16 {
 }
 .h-560 {
   height: 680px;
+}
+
+.add-player-info {
+  background: rgba(248, 248, 252, 0.50);
+}
+.upload-box {
+  display: flex;
+  width: 284px;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  align-self: stretch;
+  border-radius: 12px;
+  border: 1px solid #CFF5EE;
+  background: #ECFBF8;
+}
+
+.upload-box .icon-box {
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  border-radius: 15px;
+  border: 1px dashed #54B6A3;
+  background: transparent;
+}
+
+.player-details {
+  height: 254px;
+  padding: 72px 85px 72px 24.407px;
+  gap: 22.984px;
+  align-self: stretch;
+  border-radius: 16px;
+  background-color: linear-gradient(107deg, rgba(31, 31, 31, 0.00) 12.84%, #1F1F1F 79.12%);
+  background-image: url("../../assets/png/bg-avatar-card.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-blend-mode: normal, luminosity, normal;
+}
+.player-details  img {
+  width: 108px;
+  height: 108px;
+}
+.bg-player-card {
+  border-radius: 20px;
+  background: linear-gradient(202deg, #FFF 25.35%, #F5F6FB 92.26%);
+}
+.max-w-354 {
+  max-width: 354px;
+}
+
+.w-40 {
+  width: 40px;
+}
+.h-40 {
+  height: 40px;
+}
+
+.w-960 {
+  width: 960px;
 }

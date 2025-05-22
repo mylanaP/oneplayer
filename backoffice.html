@@ -255,13 +255,13 @@
               <input type="text" class="form-control text-14  border-0 py-12" readonly>
             </div>
             <div class="col-auto  justify-content-end">
-              <button type="submit" class="btn btn-default btn-md ">
+              <span data-bs-toggle="modal" data-bs-target="#new-member-modal" class="btn btn-default btn-md ">
                 <svg xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 9 10" fill="none">
                   <path d="M2.25 5.08594H6.75" stroke="white" stroke-width="1.52725" stroke-linecap="round" stroke-linejoin="round"/>
                   <path d="M4.5 7.33594V2.83594" stroke="white" stroke-width="1.52725" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
                 <span class="text-14">Add Members</span>
-              </button>
+              </span>
             </div>
           </form>
           <div class="d-flex align-items-center justify-content-end">
@@ -676,7 +676,7 @@
                 </div>
                 <div class="d-flex align-items-center justify-content-center gap-8">
                   <div class="text-20 text-white">Prime City FC</div>
-                  <div class="flex-shrink-0">
+                  <div class="flex-shrink-0" data-bs-toggle="modal" data-bs-target="#transfer-club-modal">
                     <svg xmlns="http://www.w3.org/2000/svg" width="14" height="15" viewBox="0 0 14 15" fill="none">
                       <path d="M6.41699 1.75H5.25033C2.33366 1.75 1.16699 2.91667 1.16699 5.83333V9.33333C1.16699 12.25 2.33366 13.4167 5.25033 13.4167H8.75033C11.667 13.4167 12.8337 12.25 12.8337 9.33333V8.16667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
                       <path d="M9.35708 2.35093L4.76042 6.94759C4.58542 7.12259 4.41042 7.46676 4.37542 7.71759L4.12458 9.47342C4.03125 10.1093 4.48042 10.5526 5.11625 10.4651L6.87208 10.2143C7.11708 10.1793 7.46125 10.0043 7.64208 9.82926L12.2388 5.23259C13.0321 4.43926 13.4054 3.51759 12.2388 2.35093C11.0721 1.18426 10.1504 1.55759 9.35708 2.35093Z" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -699,13 +699,13 @@
             <div class="d-flex p-20 flex-column align-items-start gap-20 flex100 card-white w-50">
               <div class="d-flex justify-content-between align-items-center align-self-stretch">
                 <div class="text-20">Useful Links</div>
-                <button type="submit" class="btn btn-default btn-md ">
+                <span class="btn btn-default btn-md "  data-bs-toggle="modal" data-bs-target="#create-link-modal">
                   <svg xmlns="http://www.w3.org/2000/svg" width="9" height="10" viewBox="0 0 9 10" fill="none">
                     <path d="M2.25 5.08594H6.75" stroke="white" stroke-width="1.52725" stroke-linecap="round" stroke-linejoin="round"/>
                     <path d="M4.5 7.33594V2.83594" stroke="white" stroke-width="1.52725" stroke-linecap="round" stroke-linejoin="round"/>
                   </svg>
                   <span class="text-14">New Link</span>
-                </button>
+                </span>
               </div>
               <div class="d-flex flex-column align-items-center gap-8 flex100 align-self-stretch custom-tab-content" style="min-height: 340px;">
                 <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
@@ -721,7 +721,7 @@
                         <path d="M7.45508 2.66406C7.79008 3.85906 8.72508 4.79406 9.92508 5.13406" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
                       </svg>
                     </span>
-                    <span class="btn btn-white btn-md icon-delete">
+                    <span class="btn btn-white btn-md icon-delete"  data-bs-toggle="modal" data-bs-target="#confirm-delete-modal">
                       <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
                         <path d="M10.5 3.57812C8.835 3.41312 7.16 3.32812 5.49 3.32812C4.5 3.32812 3.51 3.37813 2.52 3.47813L1.5 3.57812" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M4.25 3.07094L4.36 2.41594C4.44 1.94094 4.5 1.58594 5.345 1.58594H6.655C7.5 1.58594 7.565 1.96094 7.64 2.42094L7.75 3.07094" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
@@ -2058,6 +2058,213 @@
     </div>
   </div>
 
+  <div class="modal fullpage" id="new-member-modal">
+    <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+		<div class="modal-dialog modal-lead-management modal-dialog-scrollable">
+		  <div class="modal-content d-flex flex-column gap-40 p-40 w-960 radius-12">
+        <div class="d-flex align-items-center justify-content-between">
+					<div class="text-32">New/Edit Player</div>
+          <span class="btn btn-default btn-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+              <path d="M4 8H12" stroke="white" stroke-width="2.34961" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M8 12V4" stroke="white" stroke-width="2.34961" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span data-bs-toggle="modal" data-bs-target="#member-created-modal">Add Member</span>
+          </span>
+				</div>
+
+				<div class="">
+          <label for="newMemberName" class="form-label text-16">Member Name</label>
+          <input type="text" class="form-control p-20" id="newMemberName" placeholder="Member Name">
+        </div>
+
+        <div class="">
+          <label for="memberRole" class="form-label text-16">Member Role</label>
+          <div class="d-flex p-20 align-items-center align-self-stretch form-control">
+            <div class="tag success p-12">Goalkeeper</div>
+            <div class="tag purple p-12">Defenders</div>
+            <div class="tag add-btn">
+              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
+                <path d="M2.25 4.5H6.75" stroke="#8B8B8B" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M4.5 6.75V2.25" stroke="#8B8B8B" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              <span>Add</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="d-flex p-12 flex-column align-items-start gap-20 align-self-stretch add-player-info radius-12">
+          <div class="text-12 text-gray">Player Info</div>
+          <div class="d-flex align-items-start gap-20 align-self-stretch">
+            <div class="upload-box">
+              <div class="icon-box">
+                <i class="bi bi-plus text-strong-success"></i>
+              </div>
+              <div class="d-flex flex-column align-items-center gap-20">
+                <div class="text-16">Player Photo</div>
+                <span class="btn btn-white btn-md"> Upload Images</span>
+                <span class="text-link text-12">JPG or PNG - 256MB max size</span>
+              </div>
+            </div>
+            <div class="d-flex flex-column align-items-start gap-20 flex100">
+              <div class="d-flex align-self-stretch flex-column gap-8">
+                <label class="form-label mb-0 text-14">Position</label>
+                <input type="text" class="form-control p-20 justify-content-between" placeholder="Position">
+              </div>
+              <div class="d-flex align-self-stretch flex-column gap-8">
+                <label class="form-label mb-0 text-14">Height</label>
+                <input type="text" class="form-control p-20 justify-content-between" placeholder="Height">
+              </div>
+              <div class="d-flex align-self-stretch flex-column gap-8">
+                <label class="form-label mb-0 text-14">Birthday</label>
+                <div class="input-group">
+                  <input type="text" class="form-control p-20 justify-content-between border-end-0" placeholder="Birthday">
+                  <span class="input-group-text bg-white ">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M4.66699 1.16406V2.91406" stroke="#182230" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.33301 1.16406V2.91406" stroke="#182230" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M2.04199 5.30469H11.9587" stroke="#292D32" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M12.25 4.95573V9.91406C12.25 11.6641 11.375 12.8307 9.33333 12.8307H4.66667C2.625 12.8307 1.75 11.6641 1.75 9.91406V4.95573C1.75 3.20573 2.625 2.03906 4.66667 2.03906H9.33333C11.375 2.03906 12.25 3.20573 12.25 4.95573Z" stroke="#292D32" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.15565 7.99479H9.16089" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9.15565 9.74479H9.16089" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6.99745 7.99479H7.00269" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M6.99745 9.74479H7.00269" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.83827 7.99479H4.84351" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4.83827 9.74479H4.84351" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <label for="" class="form-label text-16">Member Email</label>
+          <input type="text" class="form-control p-20"  placeholder="memger@login.com">
+        </div>
+
+        <div class="">
+          <label for="" class="form-label text-16">Member Phone Number</label>
+          <input type="text" class="form-control p-20"  placeholder="+44">
+        </div>
+		  </div>
+		</div>
+  </div>
+
+  <div class="modal fullpage" id="member-created-modal">
+    <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+    <div class="modal-dialog modal-dialog-centered">
+		  <div class="modal-content d-flex flex-column radius-12">
+        <div class="d-flex p-40 flex-column justify-content-center align-items-center gap-40">
+          <div class="text-32">Member has been created</div>
+          <div class="d-flex flex-column bg-player-card">
+            <div class="d-flex p-4px align-items-start align-self-stretch radius-20 player-details max-w-354">
+              <img src="./assets/png/avatar_player.png">
+              <div class="d-flex flex-column align-items-start gap-12">
+                <div class="tag p-6 text-12">Staff</div>
+                <div class="text-24 text-white">Jams Clarke</div>
+              </div>
+            </div>
+            <div class="d-flex flex-column p-12 align-items-start gap-8 align-self-stretch">
+              <div class="d-flex p-8px align-items-center gap-8 align-self-stretch bg-white radius-12">
+                <div class="icon-box w-40 h-40 p-12">
+                  <i class="bi bi-send-fill text-cyan-gray text-16"></i>
+                </div>
+                <div class="d-flex flex-column align-items-start">
+                  <div class="text-16 text-cyan-gray">Email</div>
+                  <div class="text-16">email@login.com</div>
+                </div>
+              </div>
+              <div class="d-flex p-8px align-items-center gap-8 align-self-stretch bg-white radius-12">
+                <div class="icon-box w-40 h-40 p-12">
+                  <i class="bi bi-telephone-fill text-cyan-gray text-16"></i>
+                </div>
+                <div class="d-flex flex-column align-items-start">
+                  <div class="text-16 text-cyan-gray">Mobile Number</div>
+                  <div class="text-16">+44070707070</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="d-flex align-items-start gap-12 align-self-stretch justify-content-center">
+            <span class="btn btn-white btn-lg flex100">Close</span>
+            <span class="btn btn-default btn-lg">
+              <i class="bi bi-plus test-white"></i>
+              <span>Add Member</span>
+            </span>
+          </div>
+        </div>
+		  </div>
+		</div>
+  </div>
+
+  <div class="modal fullpage" id="transfer-club-modal">
+    <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content d-flex flex-column radius-12 w-960 p-40">
+        <div class="d-flex flex-column gap-40 align-items-center">
+          <div class="d-flex align-items-center justify-content-between w-100">
+  					<div class="text-32">Transfer Club Ownership</div>
+            <span class="btn btn-default btn-lg">
+              <span data-bs-toggle="modal" data-bs-target="#member-created-modal">Change Ownership</span>
+            </span>
+  				</div>
+  				<span class="text-20 text-cyan-neutral">You are about to change the club ownership to <span class="text-aqua">Full Name</span>. Please enter your password below to confirm your decision.</span>
+  				<div class="w-100">
+  				  <label class="form-label ">Password</label>
+  				  <input type="password" class="form-control p-20">
+  				</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fullpage" id="create-link-modal">
+    <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content d-flex flex-column radius-12 w-960 p-40">
+        <div class="d-flex flex-column gap-40 align-items-center">
+          <div class="d-flex align-items-center justify-content-between w-100">
+  					<div class="text-32">Create New Useful Link</div>
+            <span class="btn btn-default btn-lg">
+              <span>Add Link</span>
+            </span>
+  				</div>
+
+  				<div class="w-100">
+  				  <label class="form-label ">Link Title</label>
+  				  <input type="text" class="form-control p-20">
+  				</div>
+  				<div class="w-100">
+  				  <label class="form-label ">Link URL</label>
+  				  <input type="text" class="form-control p-20">
+  				</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fullpage" id="confirm-delete-modal">
+    <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content d-flex flex-column radius-12 p-40">
+        <div class="d-flex flex-column gap-40 align-items-center">
+          <div class="d-flex align-items-center justify-content-between w-100">
+  					<div class="text-32">Are you sure you want to delete this?</div>
+  				</div>
+
+  				<div class="d-flex align-items-start gap-12 align-self-stretch">
+  				  <span class="btn btn-white btn-lg flex100">Close</span>
+  				  <span class="btn btn-danger btn-lg flex100">
+  				    <i class="bi bi-trash"></i>
+  				    <span>Delete</span>
+  				  </span>
+  				</div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- Custom JS dependencies -->
   <script src="./assets/js/sidebar.js"></script>
   <script src="./assets/js/pie-apexchart.js"></script>
