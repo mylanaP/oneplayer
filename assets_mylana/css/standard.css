@@ -567,8 +567,8 @@ select option.text-16 {
   border: 1px solid #E8ECF5;
   background: #FFF;
 }
-.min-w-575 {
-  min-width: 575px;
+.min-w-540 {
+  min-width: 540px;
 }
 .max-h-270 {
   max-height: 270px;
@@ -661,5 +661,7 @@ input:checked + .slider::before {
 }
 
 @media screen and (min-width: 768px) and (max-width: 1399px) {
-
+  .min-w-540 {
+    width: 540px;
+  }
 }
