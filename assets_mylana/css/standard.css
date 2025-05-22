@@ -226,7 +226,7 @@ tr:hover td {
 }
 
 .empty-field {
-  display: none;
+  display: none !important;
 }
 
 .min-h-290 {
@@ -654,4 +654,12 @@ input:checked + .slider::before {
   background: transparent;
   border: none;
   box-shadow: none;
+}
+
+.min-w-440 {
+  min-width: 440px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1399px) {
+
 }
