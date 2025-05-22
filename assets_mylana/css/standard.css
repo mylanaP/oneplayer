@@ -381,7 +381,7 @@ select option.text-16 {
   flex: 1 0 0;
   align-self: stretch;
 }
-.card-header {
+.custom-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -409,7 +409,7 @@ select option.text-16 {
   text-underline-offset: auto;
   text-underline-position: from-font;
 }
-.card-content {
+.custom-card-content {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -427,7 +427,7 @@ select option.text-16 {
   overflow-y: auto;
 }
 
-.card-content .list-item {
+.custom-card-content .list-item {
   display: flex;
   padding: 20px;
   justify-content: space-between;
@@ -438,7 +438,7 @@ select option.text-16 {
   background: linear-gradient(202deg, #FFF 25.35%, #F5F6FB 92.26%);
 }
 
-.card-content .list-actions {
+.custom-card-content .list-actions {
   display: flex;
   align-items: center;
   gap: 8px;
