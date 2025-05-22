@@ -200,18 +200,6 @@ $(document).ready(function() {
   var pChart9 = new ApexCharts(document.querySelector("#progressCircle9"), progress_Options);
   var pChart10 = new ApexCharts(document.querySelector("#progressCircle10"), {...progress_Options, colors: ['#E58485']});
 
-  pChart1.render();
-  pChart2.render();
-  pChart3.render();
-  pChart4.render();
-  pChart5.render();
-  pChart6.render();
-  pChart7.render();
-  pChart8.render();
-  pChart9.render();
-  pChart10.render();
-
-
   // CMJ chart
 
   var cmjChart1 = new ApexCharts(document.querySelector("#cmjChart1"), cmj_Options);
@@ -223,12 +211,27 @@ $(document).ready(function() {
   var cmjChart7 = new ApexCharts(document.querySelector("#cmjChart7"), cmj_Options);
   var cmjChart8 = new ApexCharts(document.querySelector("#cmjChart8"), cmj_Options);
 
-  cmjChart1.render();
-  cmjChart2.render();
-  cmjChart3.render();
-  cmjChart4.render();
-  cmjChart5.render();
-  cmjChart6.render();
-  cmjChart7.render();
-  cmjChart8.render();
+
+  try {
+    pChart1.render();
+    pChart2.render();
+    pChart3.render();
+    pChart4.render();
+    pChart5.render();
+    pChart6.render();
+    pChart7.render();
+    pChart8.render();
+    pChart9.render();
+    pChart10.render();
+    cmjChart1.render();
+    cmjChart2.render();
+    cmjChart3.render();
+    cmjChart4.render();
+    cmjChart5.render();
+    cmjChart6.render();
+    cmjChart7.render();
+    cmjChart8.render();
+  } catch(err) {
+    console.log('error rendering apexchart');
+  }
 });
