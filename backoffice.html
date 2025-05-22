@@ -293,7 +293,8 @@
               </li>
             </ul>
           </div>
-          <div class="d-grid grid-col-3 gap-12 has-scrollbar player-list h-560"><div class="d-flex p-20 flex-column position-relative align-items-start flex100 align-self-stretch player-card-staff">
+          <div class="d-grid grid-col-3 gap-12 has-scrollbar player-list h-560">
+            <div class="d-flex p-20 flex-column position-relative align-items-start gap-20 flex100 align-self-stretch player-card-staff">
               <div class="d-flex align-items-center gap-12">
                 <div class="player-card-avatar flex-shrink-0">
                   <img src="./assets_mylana/png/player-avatar.png">
@@ -327,7 +328,7 @@
                   </div>
                 </div>
               </div>
-              <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 float-icon-dot">
+              <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 float-icon-dot" data-bs-toggle="modal" data-bs-target="#member-edit-modal">
                 <i class="bi bi-three-dots text-black"></i>
               </button>
             </div>
@@ -2197,6 +2198,47 @@
         </div>
 		  </div>
 		</div>
+  </div>
+
+  <div class="modal fullpage" id="member-edit-modal">
+    <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content d-flex flex-column gap-40 p-40 w-960 radius-12">
+        <div class="d-flex align-items-center justify-content-between">
+					<div class="text-32">New/Edit Member</div>
+          <span class="btn btn-default btn-lg">
+            <i class="bi bi-plus"></i>
+            <span data-bs-toggle="modal" data-bs-target="#member-created-modal">Add Member</span>
+          </span>
+				</div>
+
+				<div class="">
+          <label for="newMemberName" class="form-label text-16">Member Name</label>
+          <input type="text" class="form-control p-20" id="newMemberName" placeholder="Member Name">
+        </div>
+
+        <div class="">
+          <label for="memberRole" class="form-label text-16">Member Role</label>
+          <div class="d-flex p-20 align-items-center align-self-stretch form-control">
+            <div class="tag text-strong-neutral p-12">Goalkeeper</div>
+            <div class="tag add-btn text-888">
+              <i class="bi bi-plus"></i>
+              <span>Add</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="">
+          <label for="" class="form-label text-16">Member Email</label>
+          <input type="text" class="form-control p-20"  placeholder="memger@login.com">
+        </div>
+
+        <div class="">
+          <label for="" class="form-label text-16">Member Phone Number</label>
+          <input type="text" class="form-control p-20"  placeholder="+44">
+        </div>
+		  </div>
+    </div>
   </div>
 
   <div class="modal fullpage" id="transfer-club-modal">
