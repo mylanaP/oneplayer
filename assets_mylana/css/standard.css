@@ -747,12 +747,22 @@ input:checked + .slider::before {
 }
 .error {
   border: 1px solid #C45B5C;
-  color: #C45B5C;
 }
 .error::placeholder {
   color: #C45B5C;
   opacity: 1; /* Firefox */
 }
-.error ::placeholder {
+.note-editor.error {
+  border: 1px solid #C45B5C;
+}
+.slick-slide {
+  margin: 0 12px;
+}
+.error .note-placeholder {
   color: #C45B5C;
+}
+
+.note-popover .popover-content, .note-editor .note-toolbar {
+  margin: 0 !important;
+  padding: 0 0 5px 15px !important;
 }
