@@ -1,0 +1,1 @@
+$("#session_tags").tagsinput('items');

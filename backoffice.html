@@ -19,6 +19,7 @@
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+	<link rel='stylesheet' href='https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.css'>
   <link href="https://cdn.jsdelivr.net/npm/summernote/dist/summernote-bs5.css" rel="stylesheet" />
   <!-- <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/main.min.css" rel="stylesheet"> -->
   <link rel="icon" type="image/x-icon" href="./assets/png/logo-tablet.png" />
@@ -26,13 +27,12 @@
   <link href="./assets/css/dashboard.css" rel="stylesheet" />
   <link href="./assets/css/sidebar.css" rel="stylesheet" />
   <link href="./assets/css/main_content.css" rel="stylesheet" />
-  <link href="./assets_mylana/css/standard.css" rel="stylesheet" />
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src='https://bootstrap-tagsinput.github.io/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js'></script>
 </head>
 
 <body>
@@ -41,85 +41,80 @@
     <div class="overflow-y-scroll position-fixed w-max-content sidebar-container main-container bg-custom-primary pb-60 z-2">
       <div class="d-none d-xxl-flex flex-column sidebar-desktop-container pt-60 pb-60 gap-40 px-20">
         <div class="d-flex align-items-center justify-content-between sidebar-header pl-20 gap-40">
-          <img src="./assets/png/logo.png" class="logo" alt="Logo" />
-          <button class="d-none d-xl-block d-xxl-none align-items-center justify-content-center sidebar-close-btn">
-            <img src="./assets/svg/icon-sidebar-left.svg" class="sidebar-close-icon" alt="Sidebar Close Icon" />
+          <img src="./assets/png/logo.png" class="logo" alt="Logo">
+          <button class="d-none d-md-block d-xxl-none align-items-center justify-content-center sidebar-close-btn">
+            <img src="./assets/svg/icon-sidebar-left.svg" class="sidebar-close-icon" alt="Sidebar Close Icon">
           </button>
         </div>
         <div class="d-flex flex-column gap-20">
-          <a href="index.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+          <a href="index.html" class="d-flex flex-row sidebar-link-container py-12 px-20 active radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-home.svg" class="w-20 h-20 w-12 h-12" alt="Home Icon" />
+              <img src="./assets/svg/icon-home.svg" class="w-20 h-20 w-12 h-12" alt="Home Icon">
               <span class="fw-medium text-white text-16">Home</span>
             </div>
           </a>
-          <a href="players.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+          <a href="physical-performance-dashboard.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon" />
+              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
               <span class="fw-medium text-white text-16">Physical Performance</span>
             </div>
-          </a>
+          </a>						
           <a href="medical.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-medical.svg" class="w-20 h-20 w-12 h-12" alt="Medical Icon" />
+              <img src="./assets/svg/icon-medical.svg" class="w-20 h-20 w-12 h-12" alt="Medical Icon">
               <span class="fw-medium text-white text-16">Medical</span>
             </div>
           </a>
           <a href="players.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon" />
+              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
               <span class="fw-medium text-white text-16">Players</span>
             </div>
           </a>
           <a href="calendar.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20 w-12 h-12" alt="Calendar Icon" />
+              <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20 w-12 h-12" alt="Calendar Icon">
               <span class="fw-medium text-white text-16">Calendar</span>
             </div>
           </a>
-          <a href="players.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+          <a href="news.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon" />
+              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
               <span class="fw-medium text-white text-16">News</span>
             </div>
           </a>
-          <a href="messages.html"
-            class="d-flex flex-row justify-content-between align-items-center sidebar-link-container py-12 px-20 radius-8">
+          <a href="messages.html" class="d-flex flex-row justify-content-between align-items-center sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-message.svg" class="w-20 h-20 w-12 h-12" alt="Message Icon" />
+              <img src="./assets/svg/icon-message.svg" class="w-20 h-20 w-12 h-12" alt="Message Icon">
               <span class="fw-medium text-white text-16">Messages</span>
             </div>
-            <span
-              class="d-none d-xxl-flex p-1 align-items-center fw-bold sidebar-link-notification-text text-8 radius-100">2433</span>
+            <span class="d-none d-xxl-flex p-1 align-items-center fw-bold sidebar-link-notification-text text-8 radius-100">2433</span>
           </a>
           <a href="surveys.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20 w-12 h-12" alt="Surveys Icon" />
+              <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20 w-12 h-12" alt="Surveys Icon">
               <span class="fw-medium text-white text-16">Surveys</span>
             </div>
           </a>
           <div class="sidebar-sub-header-container text-xxl-start pt-20 px-20">
             <span class="fw-bold text-white text-10 opacity-0-7">Other</span>
           </div>
-          <a href="backoffice.html" class="d-flex flex-row sidebar-link-container active py-12 px-20 radius-8">
+          <a href="backoffice.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20 w-12 h-12" alt="Puzzle Icon" />
+              <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20 w-12 h-12" alt="Puzzle Icon">
               <span class="fw-medium text-white text-16">Backoffice</span>
             </div>
           </a>
-          <div
-            class="d-flex align-items-center justify-content-start dropdown dropdown-menu-end sidebar-account-container pt-20">
-            <button type="button"
-              class="d-flex flex-row w-100 p-2 align-items-center justify-content-start border-0 bg-account-card max-w-md-48 max-height-48 radius-100 dropdown-toggle"
-              data-bs-toggle="dropdown">
+          <div class="d-flex align-items-center justify-content-start dropdown dropdown-menu-end sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row w-100 p-2 align-items-center justify-content-start border-0 bg-account-card max-w-md-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
               <div class="d-flex flex-row justify-content-center align-items-center gap-8">
-                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar" />
+                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
                 <div class="d-flex flex-column w-200">
                   <span class="fw-medium text-white text-start text-16">Jennings Torp</span>
                   <span class="fw-normal text-white text-start text-14 opacity-0-5">Jennings_Torp@yahoo.com</span>
                 </div>
               </div>
-              <img src="./assets//svg/icon-arrow-right.svg" class="sidebar-link-arrow" alt="Arrow Right Icon" />
+              <img src="./assets//svg/icon-arrow-right.svg" class="sidebar-link-arrow" alt="Arrow Right Icon">
             </button>
             <ul class="dropdown-menu sub-menu-container">
               <li>
@@ -133,60 +128,48 @@
         </div>
         <span class="fw-normal text-white text-14 opacity-0-4">© 2024, All Rights Reserved</span>
       </div>
-      <div class="d-none d-xl-flex d-xxl-none sidebar-tablet-container flex-column pt-60 pb-60 gap-40 px-12">
+      <div class="d-none d-md-flex d-xxl-none sidebar-tablet-container flex-column pt-60 pb-60 gap-40 px-12">
         <div class="d-flex flex-column align-items-center justify-content-center sidebar-header gap-40">
           <button class="d-flex align-items-center justify-content-center sidebar-open-btn">
-            <img src="./assets/svg/icon-sidebar-right.svg" class="sidebar-open-icon" alt="Sidebar Open Icon" />
+            <img src="./assets/svg/icon-sidebar-right.svg" class="sidebar-open-icon" alt="Sidebar Open Icon">
           </button>
-          <img src="./assets/png/logo-tablet.png" class="max-w-40 max-height-40" alt="Tablet Logo" />
+          <img src="./assets/png/logo-tablet.png" class="max-w-40 max-height-40" alt="Tablet Logo">
         </div>
         <div class="d-flex flex-column gap-20">
-          <a href="index.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-home.svg" class="w-20 h-20" alt="Home Icon" />
+          <a href="index.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 active radius-8">
+            <img src="./assets/svg/icon-home.svg" class="w-20 h-20" alt="Home Icon">
           </a>
-          <a href="performance.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-book.svg" class="w-20 h-20" alt="Book Icon" />
+          <a href="physical-performance-dashboard.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-book.svg" class="w-20 h-20" alt="Book Icon">
           </a>
-          <a href="medical.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 active radius-8">
-            <img src="./assets/svg/icon-medical.svg" class="w-20 h-20" alt="Medical Icon" />
+          <a href="medical.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-medical.svg" class="w-20 h-20" alt="Medical Icon">
           </a>
-          <a href="players.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-player.svg" class="w-20 h-20" alt="Player Icon" />
+          <a href="players.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-player.svg" class="w-20 h-20" alt="Player Icon">
           </a>
-          <a href="calendar.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20" alt="Calendar Icon" />
+          <a href="calendar.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20" alt="Calendar Icon">
           </a>
-          <a href="news.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-document.svg" class="w-20 h-20" alt="Book Icon" />
+          <a href="news.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-document.svg" class="w-20 h-20" alt="Book Icon">
           </a>
-          <a href="messages.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-message.svg" class="w-20 h-20" alt="Message Icon" />
+          <a href="messages.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-message.svg" class="w-20 h-20" alt="Message Icon">
           </a>
-          <a href="surveys.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20" alt="Surveys Icon" />
+          <a href="surveys.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20" alt="Surveys Icon">
           </a>
           <div class="sidebar-sub-header-container text-center">
             <span class="fw-bold text-white text-10 opacity-0-7">Other</span>
           </div>
-          <a href="backoffice.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20" alt="Puzzle Icon" />
+          <a href="backoffice.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20" alt="Puzzle Icon">
           </a>
-          <div
-            class="d-flex align-items-center justify-content-center dropdown dropend sidebar-account-container pt-20">
-            <button type="button"
-              class="d-flex flex-row p-2 align-items-center justify-content-center border-0 bg-account-card max-w-48 max-height-48 radius-100 dropdown-toggle"
-              data-bs-toggle="dropdown">
+          <div class="d-flex align-items-center justify-content-center dropdown dropend sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row p-2 align-items-center justify-content-center border-0 bg-account-card max-w-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
               <div class="d-flex flex-row justify-content-center align-items-center gap-8">
-                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar" />
+                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
               </div>
             </button>
             <ul class="dropdown-menu sub-menu-container">
@@ -294,11 +277,11 @@
             </ul>
           </div>
           <!-- Player list -->
-          <div class="d-grid grid-col-xxl-3 grid-col-md-2 gap-12 has-scrollbar player-list h-560">
-            <div class="d-flex p-20 flex-column position-relative align-items-start gap-20 flex100 align-self-stretch player-card-staff">
+          <div class="d-grid grid-col-xxl-3 grid-col-md-2 gap-12 has-scrollbar player-list h-680">
+            <div class="d-flex p-20 flex-column position-relative align-items-start gap-20 flex-1-0-0 align-self-stretch radius-12 bg-custom-gradient-primary">
               <div class="d-flex align-items-center gap-12">
                 <div class="player-card-avatar flex-shrink-0">
-                  <img src="./assets_mylana/png/player-avatar.png">
+                  <img src="./assets/png/player-avatar.png">
                 </div>
                 <div class="d-flex flex-column align-items-start gap-8">
                   <div class="tag">Staff</div>
@@ -330,11 +313,11 @@
                   </div>
                 </div>
               </div>
-              <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 float-icon-dot" data-bs-toggle="modal" data-bs-target="#member-edit-modal">
+              <button class="position-absolute max-w-24 max-height-24 top-10 end-10 border-0 float-icon-dot" data-bs-toggle="modal" data-bs-target="#member-edit-modal">
                 <i class="bi bi-three-dots text-black"></i>
               </button>
             </div>
-            <div class="d-flex w-100 position-relative player-card">
+            <div class="d-flex w-100 position-relative p-4px align-items-start flex-1-0-0 radius-12 flex-column bg-custom-gradient-primary">
               <div class="d-flex position-relative max-height-145 w-100 p-1">
                 <img src="./assets/png/bg-avatar-card.png" class="mini-avatar-card position-absolute radius-12"
                   alt="Avatar Card Background" />
@@ -345,7 +328,7 @@
                     <span class="fw-medium text-white text-20">Nelson Jardim</span>
                   </div>
                 </div>
-                <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 bg-btn-3-dots radius-5">
+                <button class="position-absolute max-w-24 max-height-24 top-10 end-10 border-0 bg-btn-3-dots radius-5">
                   <i class="bi bi-three-dots text-white"></i>
                 </button>
               </div>
@@ -376,7 +359,7 @@
               </div>
             </div>
 
-            <div class="d-flex w-100 position-relative player-card">
+            <div class="d-flex w-100 position-relative p-4px align-items-start flex-1-0-0 radius-12 flex-column bg-custom-gradient-primary">
               <div class="d-flex position-relative max-height-145 w-100 p-1">
                 <img src="./assets/png/bg-avatar-card.png" class="mini-avatar-card position-absolute radius-12"
                   alt="Avatar Card Background" />
@@ -387,7 +370,7 @@
                     <span class="fw-medium text-white text-20">Nelson Jardim</span>
                   </div>
                 </div>
-                <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 bg-btn-3-dots radius-5">
+                <button class="position-absolute max-w-24 max-height-24 top-10 end-10 border-0 bg-btn-3-dots radius-5">
                   <i class="bi bi-three-dots text-white"></i>
                 </button>
               </div>
@@ -418,7 +401,7 @@
               </div>
             </div>
 
-            <div class="d-flex w-100 position-relative player-card">
+            <div class="d-flex w-100 position-relative p-4px align-items-start flex-1-0-0 radius-12 flex-column bg-custom-gradient-primary">
               <div class="d-flex position-relative max-height-145 w-100 p-1">
                 <img src="./assets/png/bg-avatar-card.png" class="mini-avatar-card position-absolute radius-12"
                   alt="Avatar Card Background" />
@@ -429,7 +412,7 @@
                     <span class="fw-medium text-white text-20">Nelson Jardim</span>
                   </div>
                 </div>
-                <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 bg-btn-3-dots radius-5">
+                <button class="position-absolute max-w-24 max-height-24 top-10 end-10 border-0 bg-btn-3-dots radius-5">
                   <i class="bi bi-three-dots text-white"></i>
                 </button>
               </div>
@@ -459,7 +442,7 @@
               </div>
             </div>
 
-            <div class="d-flex w-100 position-relative player-card">
+            <div class="d-flex w-100 position-relative p-4px align-items-start flex-1-0-0 radius-12 flex-column bg-custom-gradient-primary">
               <div class="d-flex position-relative max-height-145 w-100 p-1">
                 <img src="./assets/png/bg-avatar-card.png" class="mini-avatar-card position-absolute radius-12"
                   alt="Avatar Card Background" />
@@ -470,7 +453,7 @@
                     <span class="fw-medium text-white text-20">Nelson Jardim</span>
                   </div>
                 </div>
-                <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 bg-btn-3-dots radius-5">
+                <button class="position-absolute max-w-24 max-height-24 top-10 end-10 border-0 bg-btn-3-dots radius-5">
                   <i class="bi bi-three-dots text-white"></i>
                 </button>
               </div>
@@ -501,7 +484,7 @@
               </div>
             </div>
 
-            <div class="d-flex w-100 position-relative player-card">
+            <div class="d-flex w-100 position-relative p-4px align-items-start flex-1-0-0 radius-12 flex-column bg-custom-gradient-primary">
               <div class="d-flex position-relative max-height-145 w-100 p-1">
                 <img src="./assets/png/bg-avatar-card.png" class="mini-avatar-card position-absolute radius-12"
                   alt="Avatar Card Background" />
@@ -512,7 +495,7 @@
                     <span class="fw-medium text-white text-20">Nelson Jardim</span>
                   </div>
                 </div>
-                <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 bg-btn-3-dots radius-5">
+                <button class="position-absolute max-w-24 max-height-24 top-10 end-10 border-0 bg-btn-3-dots radius-5">
                   <i class="bi bi-three-dots text-white"></i>
                 </button>
               </div>
@@ -541,7 +524,7 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex w-100 position-relative player-card">
+            <div class="d-flex w-100 position-relative p-4px align-items-start flex-1-0-0 radius-12 flex-column bg-custom-gradient-primary">
               <div class="d-flex position-relative max-height-145 w-100 p-1">
                 <img src="./assets/png/bg-avatar-card.png" class="mini-avatar-card position-absolute radius-12"
                   alt="Avatar Card Background" />
@@ -552,7 +535,7 @@
                     <span class="fw-medium text-white text-20">Nelson Jardim</span>
                   </div>
                 </div>
-                <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 bg-btn-3-dots radius-5">
+                <button class="position-absolute max-w-24 max-height-24 top-10 end-10 border-0 bg-btn-3-dots radius-5">
                   <i class="bi bi-three-dots text-white"></i>
                 </button>
               </div>
@@ -582,7 +565,7 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex w-100 position-relative player-card">
+            <div class="d-flex w-100 position-relative p-4px align-items-start flex-1-0-0 radius-12 flex-column bg-custom-gradient-primary">
               <div class="d-flex position-relative max-height-145 w-100 p-1">
                 <img src="./assets/png/bg-avatar-card.png" class="mini-avatar-card position-absolute radius-12"
                   alt="Avatar Card Background" />
@@ -593,7 +576,7 @@
                     <span class="fw-medium text-white text-20">Nelson Jardim</span>
                   </div>
                 </div>
-                <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 bg-btn-3-dots radius-5">
+                <button class="position-absolute max-w-24 max-height-24 top-10 end-10 border-0 bg-btn-3-dots radius-5">
                   <i class="bi bi-three-dots text-white"></i>
                 </button>
               </div>
@@ -623,7 +606,7 @@
                 </div>
               </div>
             </div>
-            <div class="d-flex w-100 position-relative player-card">
+            <div class="d-flex w-100 position-relative p-4px align-items-start flex-1-0-0 radius-12 flex-column bg-custom-gradient-primary">
               <div class="d-flex position-relative max-height-145 w-100 p-1">
                 <img src="./assets/png/bg-avatar-card.png" class="mini-avatar-card position-absolute radius-12"
                   alt="Avatar Card Background" />
@@ -634,7 +617,7 @@
                     <span class="fw-medium text-white text-20">Nelson Jardim</span>
                   </div>
                 </div>
-                <button class="position-absolute max-w-24 max-height-24 top-9 end-9 border-0 bg-btn-3-dots radius-5">
+                <button class="position-absolute max-w-24 max-height-24 top-10 end-10 border-0 bg-btn-3-dots radius-5">
                   <i class="bi bi-three-dots text-white"></i>
                 </button>
               </div>
@@ -672,7 +655,7 @@
               <div class="d-flex flex-column gap-8 align-items-center align-self-stretch">
                 <div class="d-flex flex-column gap-12 align-items-center align-self-stretch">
                   <div class="clug-logo position-relative">
-                    <img src="./assets_mylana/png/club-logo.png">
+                    <img src="./assets/png/club-logo.png">
                     <div class="take-photo-btn">
                       <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                         <path d="M4.33321 11.6797H9.57321C10.9532 11.6797 11.5032 10.8347 11.5682 9.80469L11.8282 5.67469C11.8982 4.59469 11.0382 3.67969 9.95321 3.67969C9.64821 3.67969 9.36821 3.50469 9.22821 3.23469L8.86821 2.50969C8.63821 2.05469 8.03821 1.67969 7.52821 1.67969H6.38321C5.86821 1.67969 5.26821 2.05469 5.03821 2.50969L4.67821 3.23469C4.53821 3.50469 4.25821 3.67969 3.95321 3.67969C2.86821 3.67969 2.00821 4.59469 2.07821 5.67469L2.33821 9.80469C2.39821 10.8347 2.95321 11.6797 4.33321 11.6797Z" stroke="#292D32" stroke-linecap="round" stroke-linejoin="round"/>
@@ -681,7 +664,7 @@
                       </svg>
                     </div>
                   </div>
-                  <div class="text-12 text-gray">Club Name</div>
+                  <div class="text-12 text-custom-empty-neutral">Club Name</div>
                 </div>
                 <div class="d-flex align-items-center justify-content-center gap-8">
                   <div class="text-20 text-white">Prime City FC</div>
@@ -695,17 +678,17 @@
                 </div>
               </div>
               <div class="d-flex gap-8 align-items-center align-self-stretch">
-                <div class="d-flex flex-column justify-content-center align-items-center flex100 club-info-details">
-                  <div class="text-12 text-gray">Team Members</div>
+                <div class="d-flex flex-column justify-content-center align-items-center flex-1-0-0 gap-4px py-20 px-12 radius-8 custom-gradient-primary">
+                  <div class="text-12 text-custom-empty-neutral">Team Members</div>
                   <div class="text-20">23</div>
                 </div>
-                <div class="d-flex flex-column justify-content-center align-items-center flex100 club-info-details">
-                  <div class="text-12 text-gray">Total Players</div>
+                <div class="d-flex flex-column justify-content-center align-items-center flex-1-0-0 gap-4px py-20 px-12 radius-8 custom-gradient-primary">
+                  <div class="text-12 text-custom-empty-neutral">Total Players</div>
                   <div class="text-20">23</div>
                 </div>
               </div>
             </div>
-            <div class="d-flex p-20 flex-column align-items-start gap-20 flex100 card-white w-50">
+            <div class="d-flex p-20 flex-column align-items-start gap-20 flex-1-0-0 bg-white radius-12 border-custom-strong-neutral p-20 align-self-stretch w-50">
               <div class="d-flex justify-content-between align-items-center align-self-stretch">
                 <div class="text-20">Useful Links</div>
                 <span class="btn btn-default btn-md "  data-bs-toggle="modal" data-bs-target="#create-link-modal">
@@ -716,9 +699,9 @@
                   <span class="text-14">New Link</span>
                 </span>
               </div>
-              <div class="d-flex flex-column align-items-center gap-8 flex100 align-self-stretch custom-tab-content" style="min-height: 340px;">
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+              <div class="d-flex flex-column align-items-center gap-8 flex-1-0-0 align-self-stretch custom-tab-content" style="min-height: 340px;">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link ">http://useful_link...</a>
                   </div>
@@ -741,8 +724,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link  ">http://useful_link...</a>
                   </div>
@@ -765,8 +748,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link  ">http://useful_link...</a>
                   </div>
@@ -789,8 +772,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link  ">http://useful_link...</a>
                   </div>
@@ -813,8 +796,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link  ">http://useful_link...</a>
                   </div>
@@ -837,8 +820,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link  ">http://useful_link...</a>
                   </div>
@@ -861,8 +844,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link  ">http://useful_link...</a>
                   </div>
@@ -885,8 +868,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link  ">http://useful_link...</a>
                   </div>
@@ -909,8 +892,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link  ">http://useful_link...</a>
                   </div>
@@ -933,8 +916,8 @@
                     </span>
                   </div>
                 </div>
-                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch link">
-                  <div class="d-flex flex-column gap-12 flex100 align-items-start justify-content-center">
+                <div class="d-flex p-20 align-items-center gap-20 align-self-stretch border-custom-strong-neutral border-custom-strong-neutral radius-12">
+                  <div class="d-flex flex-column gap-12 flex-1-0-0 align-items-start justify-content-center">
                     <div class="text-16">Link title</div>
                     <a href="http://useful_link.com" class="text-link  ">http://useful_link...</a>
                   </div>
@@ -960,7 +943,7 @@
               </div>
             </div>
           </div>
-          <div class="d-flex align-items-start gap-10 flex100 align-self-stretch">
+          <div class="d-flex align-items-start gap-10 flex-1-0-0 align-self-stretch">
             <div class="card-white">
               <div class="custom-card-header">
                 <div class="text-20">Group Manager</div>
@@ -972,11 +955,11 @@
                   <span class="text-14">New Group</span>
                 </span>
               </div>
-              <div class="custom-card-content has-scrollbar">
-                <div class="list-item">
+              <div class="d-flex custom-card-content has-scrollbar">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Group Name</div>
-                    <div class="text-12 text-gray">12 Members</div>
+                    <div class="text-12 text-custom-empty-neutral">12 Members</div>
                   </div>
                   <div class="list-actions">
                     <span class="btn btn-white btn-md icon-edit">
@@ -997,10 +980,10 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Group Name</div>
-                    <div class="text-12 text-gray">12 Members</div>
+                    <div class="text-12 text-custom-empty-neutral">12 Members</div>
                   </div>
                   <div class="list-actions">
                     <span class="btn btn-white btn-md icon-edit">
@@ -1021,10 +1004,10 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Group Name</div>
-                    <div class="text-12 text-gray">12 Members</div>
+                    <div class="text-12 text-custom-empty-neutral">12 Members</div>
                   </div>
                   <div class="list-actions">
                     <span class="btn btn-white btn-md icon-edit">
@@ -1045,10 +1028,10 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Group Name</div>
-                    <div class="text-12 text-gray">12 Members</div>
+                    <div class="text-12 text-custom-empty-neutral">12 Members</div>
                   </div>
                   <div class="list-actions">
                     <span class="btn btn-white btn-md icon-edit">
@@ -1069,10 +1052,10 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Group Name</div>
-                    <div class="text-12 text-gray">12 Members</div>
+                    <div class="text-12 text-custom-empty-neutral">12 Members</div>
                   </div>
                   <div class="list-actions">
                     <span class="btn btn-white btn-md icon-edit">
@@ -1093,10 +1076,10 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Group Name</div>
-                    <div class="text-12 text-gray">12 Members</div>
+                    <div class="text-12 text-custom-empty-neutral">12 Members</div>
                   </div>
                   <div class="list-actions">
                     <span class="btn btn-white btn-md icon-edit">
@@ -1117,10 +1100,10 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Group Name</div>
-                    <div class="text-12 text-gray">12 Members</div>
+                    <div class="text-12 text-custom-empty-neutral">12 Members</div>
                   </div>
                   <div class="list-actions">
                     <span class="btn btn-white btn-md icon-edit">
@@ -1141,10 +1124,10 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Group Name</div>
-                    <div class="text-12 text-gray">12 Members</div>
+                    <div class="text-12 text-custom-empty-neutral">12 Members</div>
                   </div>
                   <div class="list-actions">
                     <span class="btn btn-white btn-md icon-edit">
@@ -1176,8 +1159,8 @@
                   <span class="text-14">New Role</span>
                 </span>
               </div>
-              <div class="custom-card-content has-scrollbar">
-                <div class="list-item">
+              <div class="d-flex custom-card-content has-scrollbar">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -1200,7 +1183,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -1223,7 +1206,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -1246,7 +1229,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -1269,7 +1252,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -1292,7 +1275,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -1315,7 +1298,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -1338,7 +1321,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -1361,7 +1344,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -1384,7 +1367,7 @@
                     </span>
                   </div>
                 </div>
-                <div class="list-item">
+                <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 border-custom-strong-neutral bg-custom-gradient-primary">
                   <div class="d-flex flex-column gap-12 align-items-start justify-content-center">
                     <div class="text-16">Role Name</div>
                   </div>
@@ -2057,7 +2040,7 @@
   <!-- Create new member modal -->
   <div class="modal fullpage" id="new-member-modal">
     <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
-		<div class="modal-dialog modal-lead-management modal-dialog-scrollable">
+		<div class="modal-dialog p-40 modal-dialog-scrollable">
 		  <div class="modal-content d-flex flex-column gap-40 p-40 w-960 radius-12">
         <div class="d-flex align-items-center justify-content-between">
 					<div class="text-32">New/Edit Player</div>
@@ -2076,34 +2059,33 @@
         </div>
 
         <div class="">
-          <label for="memberRole" class="form-label text-16">Member Role</label>
-          <div class="d-flex p-20 align-items-center align-self-stretch form-control">
-            <div class="tag success p-12">Goalkeeper</div>
-            <div class="tag purple p-12">Defenders</div>
-            <div class="tag add-btn">
-              <svg xmlns="http://www.w3.org/2000/svg" width="9" height="9" viewBox="0 0 9 9" fill="none">
-                <path d="M2.25 4.5H6.75" stroke="#8B8B8B" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M4.5 6.75V2.25" stroke="#8B8B8B" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              <span>Add</span>
-            </div>
-          </div>
+          <label for="member_role_tags" class="form-label text-16">Member Role</label>
+          <input type="text" id="#member_role_tags" name="member_role_tags" class="input-tags" value="Goalkeeper,Defender" data-role="tagsinput">
         </div>
 
         <div class="d-flex p-12 flex-column align-items-start gap-20 align-self-stretch add-player-info radius-12">
-          <div class="text-12 text-gray">Player Info</div>
+          <div class="text-12 text-custom-empty-neutral">Player Info</div>
           <div class="d-flex align-items-start gap-20 align-self-stretch">
-            <div class="upload-box">
-              <div class="icon-box">
-                <i class="bi bi-plus text-strong-success"></i>
+            <div class="d-flex px-10 w-284 py-20 flex-column justify-content-center align-items-center gap-40 align-self-stretch bg-mini-card-cyan-success radius-12 border-mini-card-success drop-zone-container">
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="drop-zone">
+                  <div class="drop-zone__img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M15.8337 10.8307H10.8337V15.8307H9.16699V10.8307H4.16699V9.16406H9.16699V4.16406H10.8337V9.16406H15.8337V10.8307Z" fill="#54B6A3"/>
+                    </svg>
+                  </div>
+                  <input type="file" name="myFile" class="drop-zone__input">
+                </div>
               </div>
               <div class="d-flex flex-column align-items-center gap-20">
-                <div class="text-16">Player Photo</div>
-                <span class="btn btn-white btn-md"> Upload Images</span>
-                <span class="text-link text-12">JPG or PNG - 256MB max size</span>
+                <span class="fw-medium text-16 text-cyan-black">Attach Files</span>
+                <button class="d-flex align-items-center justify-content-center bg-white fw-medium text-12 text-tab-primary px-20 py-12 btn-custom-shadow border-btn-neutral radius-8 upload-img-btn">
+                  Upload Images
+                </button>
+                <span class="fw-medium text-12 text-cyan-success">PDF, DOC, or CSV - 256MB max size</span>
               </div>
             </div>
-            <div class="d-flex flex-column align-items-start gap-20 flex100">
+            <div class="d-flex flex-column align-items-start gap-20 flex-1-0-0">
               <div class="d-flex align-self-stretch flex-column gap-8">
                 <label class="form-label mb-0 text-14">Position</label>
                 <input type="text" class="form-control p-20 justify-content-between" placeholder="Position">
@@ -2156,7 +2138,7 @@
 		  <div class="modal-content d-flex flex-column radius-12">
         <div class="d-flex p-40 flex-column justify-content-center align-items-center gap-40">
           <div class="text-32">Member has been created</div>
-          <div class="d-flex flex-column bg-player-card">
+          <div class="d-flex flex-column bg-p-4px align-items-start flex-1-0-0 radius-12 flex-column bg-custom-gradient-primary">
             <div class="d-flex p-4px align-items-start align-self-stretch radius-20 player-details max-w-354">
               <img src="./assets/png/avatar_player.png">
               <div class="d-flex flex-column align-items-start gap-12">
@@ -2186,7 +2168,7 @@
             </div>
           </div>
           <div class="d-flex align-items-start gap-12 align-self-stretch justify-content-center">
-            <span class="btn btn-white btn-lg flex100">Close</span>
+            <span class="btn btn-white btn-lg flex-1-0-0">Close</span>
             <span class="btn btn-default btn-lg">
               <i class="bi bi-plus test-white"></i>
               <span>Add Member</span>
@@ -2217,13 +2199,7 @@
 
         <div class="">
           <label for="memberRole" class="form-label text-16">Member Role</label>
-          <div class="d-flex p-20 align-items-center align-self-stretch form-control">
-            <div class="tag text-strong-neutral p-12">Goalkeeper</div>
-            <div class="tag add-btn text-888">
-              <i class="bi bi-plus"></i>
-              <span>Add</span>
-            </div>
-          </div>
+          <input type="text" id="new_member_role" class="input-tags" data-role="tagsinput" name="new_member_role" value="Staff">
         </div>
 
         <div class="">
@@ -2298,8 +2274,8 @@
   				</div>
 
   				<div class="d-flex align-items-start gap-12 align-self-stretch">
-  				  <span class="btn btn-white btn-lg flex100">Close</span>
-  				  <span class="btn btn-danger btn-lg flex100">
+  				  <span class="btn btn-white btn-lg flex-1-0-0">Close</span>
+  				  <span class="btn bg-custom-btn-alert btn-lg flex-1-0-0">
   				    <i class="bi bi-trash"></i>
   				    <span>Delete</span>
   				  </span>
@@ -2314,7 +2290,7 @@
     <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content d-flex flex-row align-items-start bg-trans gap-24 justify-content-start">
-        <div class="custom-modal-content min-w-540 flex100 max-height-702 gap-40">
+        <div class="custom-modal-content min-w-540 flex-1-0-0 h-702 gap-40">
           <div class="d-flex align-items-center justify-content-between w-100">
   					<div class="text-32">New/Edit Group</div>
             <span class="btn btn-default btn-lg">
@@ -2327,38 +2303,47 @@
   				  <input type="text" class="form-control p-20">
   				</div>
   				<div class="d-flex align-items-center justify-content-center w-100">
-  				  <div class="upload-box w-100">
-              <div class="icon-box">
-                <i class="bi bi-plus text-strong-success"></i>
+  				  <div class="d-flex w-100 p-20 flex-column justify-content-center align-items-center gap-40 align-self-stretch bg-mini-card-cyan-success radius-12 border-mini-card-success drop-zone-container">
+              <div class="d-flex align-items-center justify-content-center">
+                <div class="drop-zone">
+                  <div class="drop-zone__img">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                      <path d="M15.8337 10.8307H10.8337V15.8307H9.16699V10.8307H4.16699V9.16406H9.16699V4.16406H10.8337V9.16406H15.8337V10.8307Z" fill="#54B6A3"/>
+                    </svg>
+                  </div>
+                  <input type="file" name="myFile" class="drop-zone__input">
+                </div>
               </div>
               <div class="d-flex flex-column align-items-center gap-20">
-                <div class="text-16">Add Group Picture</div>
-                <span class="btn btn-white btn-md"> Upload Images</span>
-                <span class="text-link text-12">JPG or PNG - 256MB max size</span>
+                <span class="fw-medium text-16 text-cyan-black">Attach Files</span>
+                <button class="d-flex align-items-center justify-content-center bg-white fw-medium text-12 text-tab-primary px-20 py-12 btn-custom-shadow border-btn-neutral radius-8 upload-img-btn">
+                  Upload Images
+                </button>
+                <span class="fw-medium text-12 text-cyan-success">PDF, DOC, or CSV - 256MB max size</span>
               </div>
             </div>
   				</div>
   				<div class="d-flex align-items-start gap--4 ">
-  				  <img class="user-group-picture" src="./assets_mylana/svg/user1.svg">
-  				  <img class="user-group-picture" src="./assets_mylana/svg/user2.svg">
-  				  <img class="user-group-picture" src="./assets_mylana/svg/user3.svg">
-  				  <img class="user-group-picture" src="./assets_mylana/svg/user4.svg">
-  				  <img class="user-group-picture" src="./assets_mylana/svg/user5.svg">
-  				  <img class="user-group-picture" src="./assets_mylana/svg/user6.svg">
-  				  <img class="user-group-picture" src="./assets_mylana/svg/user7.svg">
+  				  <img class="user-group-picture" src="./assets/svg/user1.svg">
+  				  <img class="user-group-picture" src="./assets/svg/user2.svg">
+  				  <img class="user-group-picture" src="./assets/svg/user3.svg">
+  				  <img class="user-group-picture" src="./assets/svg/user4.svg">
+  				  <img class="user-group-picture" src="./assets/svg/user5.svg">
+  				  <img class="user-group-picture" src="./assets/svg/user6.svg">
+  				  <img class="user-group-picture" src="./assets/svg/user7.svg">
   				  <div class="user-group-picture bg-white text-center justify-content-center text-24 shadow-none pt-12 text-cyan-gray border-gray ">
   				    <i class="bi bi-plus mt-4"></i>
   				  </div>
   				</div>
         </div>
-        <div class="custom-modal-content min-w-540 flex100">
+        <div class="custom-modal-content min-w-540 flex-1-0-0">
           <div class="d-flex align-items-center justify-content-between w-100">
   					<div class="text-32">Add Members</div>
   				</div>
-  				<div class="d-flex flex-column gap-12 w-100 has-scrollbar h-560">
-            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-role-list-item align-self-stretch">
+  				<div class="d-flex flex-column gap-12 w-100 has-scrollbar h-680">
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
               <div class="d-flex gap-12 align-items-center">
-                <img src="./assets_mylana/svg/user1.svg">
+                <img src="./assets/svg/user1.svg">
                 <div class="d-flex flex-column gap-8">
                   <div class="text-20">Jacob Carney</div>
                   <div class="tag success text-cyan-success text-12">Goalkeeper</div>
@@ -2368,9 +2353,9 @@
                 <span class="btn btn-white btn-md text-12"><i class="bi bi-plus "></i></span>
               </div>
             </div>
-            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-role-list-item align-self-stretch">
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
               <div class="d-flex gap-12 align-items-center">
-                <img src="./assets_mylana/svg/user2.svg">
+                <img src="./assets/svg/user2.svg">
                 <div class="d-flex flex-column gap-8">
                   <div class="text-20">Antony Glennon</div>
                   <div class="tag purple text-cyan-purple text-12">Defender</div>
@@ -2380,9 +2365,9 @@
                 <span class="btn btn-white btn-md text-12"><i class="bi bi-plus "></i></span>
               </div>
             </div>
-            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-role-list-item align-self-stretch">
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
               <div class="d-flex gap-12 align-items-center">
-                <img src="./assets_mylana/svg/user3.svg">
+                <img src="./assets/svg/user3.svg">
                 <div class="d-flex flex-column gap-8">
                   <div class="text-20">Matthew Baker</div>
                   <div class="tag purple text-cyan-purple text-12">Defender</div>
@@ -2392,9 +2377,9 @@
                 <span class="btn btn-white btn-md text-12"><i class="bi bi-plus "></i></span>
               </div>
             </div>
-            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-role-list-item align-self-stretch">
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
               <div class="d-flex gap-12 align-items-center">
-                <img src="./assets_mylana/svg/user4.svg">
+                <img src="./assets/svg/user4.svg">
                 <div class="d-flex flex-column gap-8">
                   <div class="text-20">Jacob Carney</div>
                   <div class="tag success text-cyan-success text-12">Goalkeeper</div>
@@ -2404,9 +2389,9 @@
                 <span class="btn btn-white btn-md text-12"><i class="bi bi-plus "></i></span>
               </div>
             </div>
-            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-role-list-item align-self-stretch">
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
               <div class="d-flex gap-12 align-items-center">
-                <img src="./assets_mylana/svg/user5.svg">
+                <img src="./assets/svg/user5.svg">
                 <div class="d-flex flex-column gap-8">
                   <div class="text-20">Jacob Carney</div>
                   <div class="tag success text-cyan-success text-12">Goalkeeper</div>
@@ -2416,9 +2401,9 @@
                 <span class="btn btn-white btn-md text-12"><i class="bi bi-plus "></i></span>
               </div>
             </div>
-            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-role-list-item align-self-stretch">
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
               <div class="d-flex gap-12 align-items-center">
-                <img src="./assets_mylana/svg/user6.svg">
+                <img src="./assets/svg/user6.svg">
                 <div class="d-flex flex-column gap-8">
                   <div class="text-20">Jacob Carney</div>
                   <div class="tag success text-cyan-success text-12">Goalkeeper</div>
@@ -2438,7 +2423,7 @@
     <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
     <div class="modal-dialog modal-dialog-centered">
       <div class="modal-content d-flex flex-row align-items-start bg-trans gap-24 justify-content-start">
-        <div class="custom-modal-content min-w-540 max-h-270 flex100">
+        <div class="custom-modal-content min-w-540 max-h-270 flex-1-0-0">
           <div class="d-flex align-items-center justify-content-between w-100">
   					<div class="text-32">Add Roles</div>
             <span class="btn btn-default btn-lg">
@@ -2451,71 +2436,68 @@
   				  <input type="text" class="form-control p-20" placeholder="Role Name">
   				</div>
         </div>
-        <div class="custom-modal-content min-w-540 flex100 gap-40">
+        <div class="custom-modal-content min-w-540 flex-1-0-0 gap-40">
           <div class="d-flex align-items-center justify-content-between w-100">
   					<div class="text-32">Set Permissions</div>
   				</div>
-  				<div class="d-flex flex-column gap-12 w-100 has-scrollbar h-560">
-  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-role-list-item radius-12">
-  				    <div class="d-flex align-items-centergap-12 flex100 ">
+  				<div class="d-flex flex-column gap-12 w-100 has-scrollbar h-680">
+  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-custom-gradient-primary radius-12">
+  				    <div class="d-flex align-items-centergap-12 flex-1-0-0 ">
   				      <div class="d-flex py-0 px-14 justify-content-center align-items-center align-self-stretch">
   				        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
                     <path d="M9.51914 2.90887L6.63914 0.89387C5.85414 0.34387 4.64914 0.37387 3.89414 0.95887L1.38914 2.91387C0.889141 3.30387 0.494141 4.10387 0.494141 4.73387V8.18387C0.494141 9.45887 1.52914 10.4989 2.80414 10.4989H8.19414C9.46914 10.4989 10.5041 9.46387 10.5041 8.18887V4.79887C10.5041 4.12387 10.0691 3.29387 9.51914 2.90887ZM5.87414 8.49887C5.87414 8.70387 5.70414 8.87387 5.49914 8.87387C5.29414 8.87387 5.12414 8.70387 5.12414 8.49887V6.99887C5.12414 6.79387 5.29414 6.62387 5.49914 6.62387C5.70414 6.62387 5.87414 6.79387 5.87414 6.99887V8.49887Z" fill="#73A8A1"/>
                   </svg>
   				      </div>
-  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex100 ">
+  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex-1-0-0 ">
   				        <div class="text-20">Home</div>
-  				        <div class="text-12 text-7F7F80 ">Nunc vel pharetra nisl et orci. Id tempor turpis vulputate gravida turpis aenean montes. Convallis orci fusce in massa. In ac nibh.</div>
+  				        <div class="text-12 text-neutral ">Nunc vel pharetra nisl et orci. Id tempor turpis vulputate gravida turpis aenean montes. Convallis orci fusce in massa. In ac nibh.</div>
   				      </div>
   				    </div>
-  				    <div class="d-flex justify-content-end p-4px align-items-center">
-  				      <label class="custom-switch">
-                  <input type="checkbox" checked>
-                  <span class="slider"></span>
-                </label>
-  				    </div>
+  				    <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
   				  </div>
-  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-role-list-item radius-12">
-  				    <div class="d-flex align-items-centergap-12 flex100 ">
+  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-custom-gradient-primary radius-12">
+  				    <div class="d-flex align-items-centergap-12 flex-1-0-0 ">
   				      <div class="d-flex py-0 px-14 justify-content-center align-items-center align-self-stretch">
   				        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                     <path d="M11.5 2.92875V8.87375C11.5 9.35875 11.105 9.80375 10.62 9.86375L10.465 9.88375C9.645 9.99375 8.49 10.3337 7.56 10.7238C7.235 10.8588 6.875 10.6137 6.875 10.2587V3.30375C6.875 3.11875 6.98 2.94875 7.145 2.85875C8.06 2.36375 9.445 1.92375 10.385 1.84375H10.415C11.015 1.84375 11.5 2.32875 11.5 2.92875Z" fill="#73A8A1"/>
                     <path d="M5.85414 2.85875C4.93914 2.36375 3.55414 1.92375 2.61414 1.84375H2.57914C1.97914 1.84375 1.49414 2.32875 1.49414 2.92875V8.87375C1.49414 9.35875 1.88914 9.80375 2.37414 9.86375L2.52914 9.88375C3.34914 9.99375 4.50414 10.3337 5.43414 10.7238C5.75914 10.8588 6.11914 10.6137 6.11914 10.2587V3.30375C6.11914 3.11375 6.01914 2.94875 5.85414 2.85875ZM2.99914 4.37375H4.12414C4.32914 4.37375 4.49914 4.54375 4.49914 4.74875C4.49914 4.95875 4.32914 5.12375 4.12414 5.12375H2.99914C2.79414 5.12375 2.62414 4.95875 2.62414 4.74875C2.62414 4.54375 2.79414 4.37375 2.99914 4.37375ZM4.49914 6.62375H2.99914C2.79414 6.62375 2.62414 6.45875 2.62414 6.24875C2.62414 6.04375 2.79414 5.87375 2.99914 5.87375H4.49914C4.70414 5.87375 4.87414 6.04375 4.87414 6.24875C4.87414 6.45875 4.70414 6.62375 4.49914 6.62375Z" fill="#73A8A1"/>
                   </svg>
   				      </div>
-  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex100 ">
+  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex-1-0-0 ">
   				        <div class="text-20">Training</div>
-  				        <div class="text-12 text-7F7F80 ">Sit cursus mauris facilisi a convallis. Turpis semper tristique pharetra purus habitant nec. Praesent ut ullamcorper amet vel.</div>
+  				        <div class="text-12 text-neutral ">Sit cursus mauris facilisi a convallis. Turpis semper tristique pharetra purus habitant nec. Praesent ut ullamcorper amet vel.</div>
   				      </div>
   				    </div>
-  				    <div class="d-flex justify-content-end p-4px align-items-center">
-  				      <label class="custom-switch">
-                  <input type="checkbox" checked>
-                  <span class="slider"></span>
-                </label>
-  				    </div>
+  				    <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
   				  </div>
-  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-role-list-item radius-12">
-  				    <div class="d-flex align-items-centergap-12 flex100 ">
+  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-custom-gradient-primary radius-12">
+  				    <div class="d-flex align-items-centergap-12 flex-1-0-0 ">
   				      <div class="d-flex py-0 px-14 justify-content-center align-items-center align-self-stretch">
   				        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
                     <path d="M5.5 0.5C2.745 0.5 0.5 2.745 0.5 5.5C0.5 8.255 2.745 10.5 5.5 10.5C8.255 10.5 10.5 8.255 10.5 5.5C10.5 2.745 8.255 0.5 5.5 0.5ZM7.675 7.285C7.605 7.405 7.48 7.47 7.35 7.47C7.285 7.47 7.22 7.455 7.16 7.415L5.61 6.49C5.225 6.26 4.94 5.755 4.94 5.31V3.26C4.94 3.055 5.11 2.885 5.315 2.885C5.52 2.885 5.69 3.055 5.69 3.26V5.31C5.69 5.49 5.84 5.755 5.995 5.845L7.545 6.77C7.725 6.875 7.785 7.105 7.675 7.285Z" fill="#73A8A1"/>
                   </svg>
   				      </div>
-  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex100 ">
+  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex-1-0-0 ">
   				        <div class="text-20">Recovery</div>
-  				        <div class="text-12 text-7F7F80 ">Ultricies urna lectus ullamcorper enim. Odio lacus at congue mattis. Tristique lorem pellentesque donec vitae nec at sit quam.</div>
+  				        <div class="text-12 text-neutral ">Ultricies urna lectus ullamcorper enim. Odio lacus at congue mattis. Tristique lorem pellentesque donec vitae nec at sit quam.</div>
   				      </div>
   				    </div>
-  				    <div class="d-flex justify-content-end p-4px align-items-center">
-  				      <label class="custom-switch">
-                  <input type="checkbox">
-                  <span class="slider"></span>
-                </label>
-  				    </div>
+  				    <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
   				  </div>
-  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-role-list-item radius-12">
-  				    <div class="d-flex align-items-centergap-12 flex100 ">
+  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-custom-gradient-primary radius-12">
+  				    <div class="d-flex align-items-centergap-12 flex-1-0-0 ">
   				      <div class="d-flex py-0 px-14 justify-content-center align-items-center align-self-stretch">
   				        <svg width="13" height="18" viewBox="0 0 13 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M5.82089 0.757812H6.9576H7.14717L8.14923 1.75806L8.6638 2.27263L8.82629 3.43718V4.49341L8.14923 5.60379L7.68882 5.87462L7.82424 6.82251L8.82629 7.12042L9.2867 7.33708L10.6408 7.85165L11.2096 8.33913L11.6429 8.69121L11.8866 9.12453L11.6429 9.82868L11.02 10.4245H2.02962L1.37891 9.82868V8.88079L2.02962 8.33913L2.86825 7.85165L3.78919 7.33708H4.5475L5.19749 6.82251L5.60373 6.38919V5.87462L5.19749 5.60379L4.81864 4.92673L4.38503 4.033V2.92262L4.81864 1.62265L5.82089 0.757812Z" fill="#73A8A1"/>
@@ -2529,95 +2511,90 @@
                     </defs>
                   </svg>
   				      </div>
-  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex100 ">
+  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex-1-0-0 ">
   				        <div class="text-20">Players</div>
-  				        <div class="text-12 text-7F7F80 ">Cursus scelerisque nunc cursus dui risus ante nibh consequat. Pretium massa volutpat dui faucibus neque imperdiet adipiscing.</div>
+  				        <div class="text-12 text-neutral ">Cursus scelerisque nunc cursus dui risus ante nibh consequat. Pretium massa volutpat dui faucibus neque imperdiet adipiscing.</div>
   				      </div>
   				    </div>
-  				    <div class="d-flex justify-content-end p-4px align-items-center">
-  				      <label class="custom-switch">
-                  <input type="checkbox">
-                  <span class="slider"></span>
-                </label>
-  				    </div>
+  				    <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
   				  </div>
-  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-role-list-item radius-12">
-  				    <div class="d-flex align-items-centergap-12 flex100 ">
+  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-custom-gradient-primary radius-12">
+  				    <div class="d-flex align-items-centergap-12 flex-1-0-0 ">
   				      <div class="d-flex py-0 px-14 justify-content-center align-items-center align-self-stretch">
   				        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                     <path d="M10.1013 7.89057C9.67133 8.28557 9.10133 8.50557 8.51633 8.50057H3.68633C1.65133 8.35557 1.64633 5.40057 3.68633 5.25557H3.70633C2.31133 1.37557 8.20633 -0.169432 8.88133 3.90057C10.7663 4.14057 11.5313 6.64557 10.1013 7.89057Z" fill="#73A8A1"/>
                     <path d="M9.875 11C9.875 11.205 9.705 11.375 9.5 11.375H7.5C7.475 11.375 7.455 11.375 7.43 11.365C7.285 11.735 6.92 12 6.5 12C6.08 12 5.715 11.735 5.57 11.365C5.545 11.375 5.525 11.375 5.5 11.375H3.5C3.295 11.375 3.125 11.205 3.125 11C3.125 10.795 3.295 10.625 3.5 10.625H5.5C5.525 10.625 5.545 10.625 5.57 10.635C5.67 10.375 5.875 10.17 6.135 10.07C6.125 10.045 6.125 10.025 6.125 10V8.5H6.875V10C6.875 10.025 6.875 10.045 6.865 10.07C7.125 10.17 7.33 10.375 7.43 10.635C7.455 10.625 7.475 10.625 7.5 10.625H9.5C9.705 10.625 9.875 10.795 9.875 11Z" fill="#73A8A1"/>
                   </svg>
   				      </div>
-  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex100 ">
+  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex-1-0-0 ">
   				        <div class="text-20">Integrations</div>
-  				        <div class="text-12 text-7F7F80 ">Ultrices morbi morbi in vivamus accumsan placerat suscipit. Lobortis massa fermentum et aliquam. Turpis in consectetur.</div>
+  				        <div class="text-12 text-neutral ">Ultrices morbi morbi in vivamus accumsan placerat suscipit. Lobortis massa fermentum et aliquam. Turpis in consectetur.</div>
   				      </div>
   				    </div>
-  				    <div class="d-flex justify-content-end p-4px align-items-center">
-  				      <label class="custom-switch">
-                  <input type="checkbox">
-                  <span class="slider"></span>
-                </label>
-  				    </div>
+  				    <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
   				  </div>
-  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-role-list-item radius-12">
-  				    <div class="d-flex align-items-centergap-12 flex100 ">
+  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-custom-gradient-primary radius-12">
+  				    <div class="d-flex align-items-centergap-12 flex-1-0-0 ">
   				      <div class="d-flex py-0 px-14 justify-content-center align-items-center align-self-stretch">
   				        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 11 11" fill="none">
                     <path d="M7.595 0.5H3.405C1.585 0.5 0.5 1.585 0.5 3.405V7.59C0.5 9.415 1.585 10.5 3.405 10.5H7.59C9.41 10.5 10.495 9.415 10.495 7.595V3.405C10.5 1.585 9.415 0.5 7.595 0.5ZM7.375 7.375H3.625C3.42 7.375 3.25 7.205 3.25 7C3.25 6.795 3.42 6.625 3.625 6.625H7.375C7.58 6.625 7.75 6.795 7.75 7C7.75 7.205 7.58 7.375 7.375 7.375ZM7.375 4.375H3.625C3.42 4.375 3.25 4.205 3.25 4C3.25 3.795 3.42 3.625 3.625 3.625H7.375C7.58 3.625 7.75 3.795 7.75 4C7.75 4.205 7.58 4.375 7.375 4.375Z" fill="#73A8A1"/>
                   </svg>
   				      </div>
-  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex100 ">
+  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex-1-0-0 ">
   				        <div class="text-20">News</div>
-  				        <div class="text-12 text-7F7F80 ">Mattis faucibus sit vestibulum tellus tellus feugiat. Gravida felis interdum elementum integer eleifend sagittis. Morbi nam eget ac.</div>
+  				        <div class="text-12 text-neutral ">Mattis faucibus sit vestibulum tellus tellus feugiat. Gravida felis interdum elementum integer eleifend sagittis. Morbi nam eget ac.</div>
   				      </div>
   				    </div>
-  				    <div class="d-flex justify-content-end p-4px align-items-center">
-  				      <label class="custom-switch">
-                  <input type="checkbox" checked>
-                  <span class="slider"></span>
-                </label>
-  				    </div>
+  				    <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
   				  </div>
-  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-role-list-item radius-12">
-  				    <div class="d-flex align-items-centergap-12 flex100 ">
+  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-custom-gradient-primary radius-12">
+  				    <div class="d-flex align-items-centergap-12 flex-1-0-0 ">
   				      <div class="d-flex py-0 px-14 justify-content-center align-items-center align-self-stretch">
   				        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                     <path d="M8.87511 2.28V1.5C8.87511 1.295 8.70511 1.125 8.50011 1.125C8.29511 1.125 8.12511 1.295 8.12511 1.5V2.25H4.87511V1.5C4.87511 1.295 4.70511 1.125 4.50011 1.125C4.29511 1.125 4.12511 1.295 4.12511 1.5V2.28C2.77511 2.405 2.12011 3.21 2.02011 4.405C2.01011 4.55 2.13011 4.67 2.27011 4.67H10.7301C10.8751 4.67 10.9951 4.545 10.9801 4.405C10.8801 3.21 10.2251 2.405 8.87511 2.28Z" fill="#73A8A1"/>
                     <path d="M10.5 5.42188H2.5C2.225 5.42188 2 5.64687 2 5.92188V9.00187C2 10.5019 2.75 11.5019 4.5 11.5019H8.5C10.25 11.5019 11 10.5019 11 9.00187V5.92188C11 5.64687 10.775 5.42188 10.5 5.42188ZM5.105 9.60687C5.055 9.65187 5 9.68687 4.94 9.71187C4.88 9.73688 4.815 9.75187 4.75 9.75187C4.685 9.75187 4.62 9.73688 4.56 9.71187C4.5 9.68687 4.445 9.65187 4.395 9.60687C4.305 9.51187 4.25 9.38188 4.25 9.25187C4.25 9.12187 4.305 8.99188 4.395 8.89688C4.445 8.85188 4.5 8.81687 4.56 8.79187C4.68 8.74187 4.82 8.74187 4.94 8.79187C5 8.81687 5.055 8.85188 5.105 8.89688C5.195 8.99188 5.25 9.12187 5.25 9.25187C5.25 9.38188 5.195 9.51187 5.105 9.60687ZM5.21 7.69187C5.185 7.75187 5.15 7.80687 5.105 7.85687C5.055 7.90188 5 7.93687 4.94 7.96187C4.88 7.98688 4.815 8.00187 4.75 8.00187C4.685 8.00187 4.62 7.98688 4.56 7.96187C4.5 7.93687 4.445 7.90188 4.395 7.85687C4.35 7.80687 4.315 7.75187 4.29 7.69187C4.265 7.63188 4.25 7.56687 4.25 7.50187C4.25 7.43687 4.265 7.37187 4.29 7.31187C4.315 7.25187 4.35 7.19687 4.395 7.14687C4.445 7.10187 4.5 7.06687 4.56 7.04187C4.68 6.99187 4.82 6.99187 4.94 7.04187C5 7.06687 5.055 7.10187 5.105 7.14687C5.15 7.19687 5.185 7.25187 5.21 7.31187C5.235 7.37187 5.25 7.43687 5.25 7.50187C5.25 7.56687 5.235 7.63188 5.21 7.69187ZM6.855 7.85687C6.805 7.90188 6.75 7.93687 6.69 7.96187C6.63 7.98688 6.565 8.00187 6.5 8.00187C6.435 8.00187 6.37 7.98688 6.31 7.96187C6.25 7.93687 6.195 7.90188 6.145 7.85687C6.055 7.76187 6 7.63188 6 7.50187C6 7.37187 6.055 7.24187 6.145 7.14687C6.195 7.10187 6.25 7.06687 6.31 7.04187C6.43 6.98687 6.57 6.98687 6.69 7.04187C6.75 7.06687 6.805 7.10187 6.855 7.14687C6.945 7.24187 7 7.37187 7 7.50187C7 7.63188 6.945 7.76187 6.855 7.85687Z" fill="#73A8A1"/>
                   </svg>
   				      </div>
-  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex100 ">
+  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex-1-0-0 ">
   				        <div class="text-20">Calendar</div>
-  				        <div class="text-12 text-7F7F80 ">Fermentum duis arcu nunc sit purus faucibus molestie vitae. Donec pulvinar lacus morbi donec nisl sagittis amet nunc. Nunc.</div>
+  				        <div class="text-12 text-neutral ">Fermentum duis arcu nunc sit purus faucibus molestie vitae. Donec pulvinar lacus morbi donec nisl sagittis amet nunc. Nunc.</div>
   				      </div>
   				    </div>
-  				    <div class="d-flex justify-content-end p-4px align-items-center">
-  				      <label class="custom-switch">
-                  <input type="checkbox">
-                  <span class="slider"></span>
-                </label>
-  				    </div>
+  				    <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
   				  </div>
-  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-role-list-item radius-12">
-  				    <div class="d-flex align-items-centergap-12 flex100 ">
+  				  <div class="d-flex gap-40 p-12 align-items-center align-self-stretch bg-custom-gradient-primary radius-12">
+  				    <div class="d-flex align-items-centergap-12 flex-1-0-0 ">
   				      <div class="d-flex py-0 px-14 justify-content-center align-items-center align-self-stretch">
   				        <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
                     <path d="M9 1.5H4C2.62 1.5 1.5 2.615 1.5 3.99V6.98V7.48C1.5 8.855 2.62 9.97 4 9.97H4.75C4.885 9.97 5.065 10.06 5.15 10.17L5.9 11.165C6.23 11.605 6.77 11.605 7.1 11.165L7.85 10.17C7.945 10.045 8.095 9.97 8.25 9.97H9C10.38 9.97 11.5 8.855 11.5 7.48V3.99C11.5 2.615 10.38 1.5 9 1.5ZM7 7.375H4C3.795 7.375 3.625 7.205 3.625 7C3.625 6.795 3.795 6.625 4 6.625H7C7.205 6.625 7.375 6.795 7.375 7C7.375 7.205 7.205 7.375 7 7.375ZM9 4.875H4C3.795 4.875 3.625 4.705 3.625 4.5C3.625 4.295 3.795 4.125 4 4.125H9C9.205 4.125 9.375 4.295 9.375 4.5C9.375 4.705 9.205 4.875 9 4.875Z" fill="#73A8A1"/>
                   </svg>
   				      </div>
-  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex100 ">
+  				      <div class="d-flex align-items-start justify-content-center flex-column gap-12 flex-1-0-0 ">
   				        <div class="text-20">Messages</div>
-  				        <div class="text-12 text-7F7F80 ">Sed eget adipiscing a malesuada hac. Elit pretium dui orci egestas est ultrices nulla adipiscing augue. Sem amet id.</div>
+  				        <div class="text-12 text-neutral ">Sed eget adipiscing a malesuada hac. Elit pretium dui orci egestas est ultrices nulla adipiscing augue. Sem amet id.</div>
   				      </div>
   				    </div>
-  				    <div class="d-flex justify-content-end p-4px align-items-center">
-  				      <label class="custom-switch">
-                  <input type="checkbox">
-                  <span class="slider"></span>
-                </label>
-  				    </div>
+  				    <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
   				  </div>
   				</div>
         </div>
@@ -2627,14 +2604,9 @@
 
   <!-- Custom JS dependencies -->
   <script src="./assets/js/sidebar.js"></script>
-  <script src="./assets/js/pie-apexchart.js"></script>
-  <script src="./assets/js/bar-group-apexchart.js"></script>
-  <script src="./assets/js/bar-apexchart.js"></script>
-  <script src="./assets/js/bar-radial-apexchart.js"></script>
-  <script src="./assets/js/min-radial-warning-apexchart.js"></script>
-  <script src="./assets/js/min-radial-success-apexchart.js"></script>
-  <script src="./assets/js/min-radial-alert-apexchart.js"></script>
   <script src="./assets/js/bootstrap-select.js"></script>
+  <script src="./assets/js/drag-drop.js"></script>
+  <script src="./assets/js/backoffice.js"></script>
 </body>
 
 </html>
