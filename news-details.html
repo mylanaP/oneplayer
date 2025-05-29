@@ -19,20 +19,17 @@
   <link rel="stylesheet"
     href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/summernote/dist/summernote-bs5.css" rel="stylesheet" />
   <!-- <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/main.min.css" rel="stylesheet"> -->
   <link rel="icon" type="image/x-icon" href="./assets/png/logo-tablet.png" />
   <link href="./assets/css/standard.css" rel="stylesheet" />
   <link href="./assets/css/dashboard.css" rel="stylesheet" />
   <link href="./assets/css/sidebar.css" rel="stylesheet" />
   <link href="./assets/css/main_content.css" rel="stylesheet" />
-  <link href="./assets_mylana/css/standard.css" rel="stylesheet" />
 
   <!-- Bootstrap JS and dependencies -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 
 <body>
@@ -41,60 +38,58 @@
     <div class="overflow-y-scroll position-fixed w-max-content sidebar-container main-container bg-custom-primary pb-60 z-2">
       <div class="d-none d-xxl-flex flex-column sidebar-desktop-container pt-60 pb-60 gap-40 px-20">
         <div class="d-flex align-items-center justify-content-between sidebar-header pl-20 gap-40">
-          <img src="./assets/png/logo.png" class="logo" alt="Logo" />
+          <img src="./assets/png/logo.png" class="logo" alt="Logo">
           <button class="d-none d-md-block d-xxl-none align-items-center justify-content-center sidebar-close-btn">
-            <img src="./assets/svg/icon-sidebar-left.svg" class="sidebar-close-icon" alt="Sidebar Close Icon" />
+            <img src="./assets/svg/icon-sidebar-left.svg" class="sidebar-close-icon" alt="Sidebar Close Icon">
           </button>
         </div>
         <div class="d-flex flex-column gap-20">
-          <a href="index.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+          <a href="index.html" class="d-flex flex-row sidebar-link-container py-12 px-20 active radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-home.svg" class="w-20 h-20 w-12 h-12" alt="Home Icon" />
+              <img src="./assets/svg/icon-home.svg" class="w-20 h-20 w-12 h-12" alt="Home Icon">
               <span class="fw-medium text-white text-16">Home</span>
             </div>
           </a>
-          <a href="players.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+          <a href="physical-performance-dashboard.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon" />
+              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
               <span class="fw-medium text-white text-16">Physical Performance</span>
             </div>
-          </a>
+          </a>						
           <a href="medical.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-medical.svg" class="w-20 h-20 w-12 h-12" alt="Medical Icon" />
+              <img src="./assets/svg/icon-medical.svg" class="w-20 h-20 w-12 h-12" alt="Medical Icon">
               <span class="fw-medium text-white text-16">Medical</span>
             </div>
           </a>
           <a href="players.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon" />
+              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
               <span class="fw-medium text-white text-16">Players</span>
             </div>
           </a>
           <a href="calendar.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20 w-12 h-12" alt="Calendar Icon" />
+              <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20 w-12 h-12" alt="Calendar Icon">
               <span class="fw-medium text-white text-16">Calendar</span>
             </div>
           </a>
-          <a href="news.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8 active">
+          <a href="news.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon" />
+              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
               <span class="fw-medium text-white text-16">News</span>
             </div>
           </a>
-          <a href="messages.html"
-            class="d-flex flex-row justify-content-between align-items-center sidebar-link-container py-12 px-20 radius-8">
+          <a href="messages.html" class="d-flex flex-row justify-content-between align-items-center sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-message.svg" class="w-20 h-20 w-12 h-12" alt="Message Icon" />
+              <img src="./assets/svg/icon-message.svg" class="w-20 h-20 w-12 h-12" alt="Message Icon">
               <span class="fw-medium text-white text-16">Messages</span>
             </div>
-            <span
-              class="d-none d-xxl-flex p-1 align-items-center fw-bold sidebar-link-notification-text text-8 radius-100">2433</span>
+            <span class="d-none d-xxl-flex p-1 align-items-center fw-bold sidebar-link-notification-text text-8 radius-100">2433</span>
           </a>
           <a href="surveys.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20 w-12 h-12" alt="Surveys Icon" />
+              <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20 w-12 h-12" alt="Surveys Icon">
               <span class="fw-medium text-white text-16">Surveys</span>
             </div>
           </a>
@@ -103,23 +98,20 @@
           </div>
           <a href="backoffice.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
             <div class="d-flex flex-row align-items-center gap-12">
-              <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20 w-12 h-12" alt="Puzzle Icon" />
+              <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20 w-12 h-12" alt="Puzzle Icon">
               <span class="fw-medium text-white text-16">Backoffice</span>
             </div>
           </a>
-          <div
-            class="d-flex align-items-center justify-content-start dropdown dropdown-menu-end sidebar-account-container pt-20">
-            <button type="button"
-              class="d-flex flex-row w-100 p-2 align-items-center justify-content-start border-0 bg-account-card max-w-md-48 max-height-48 radius-100 dropdown-toggle"
-              data-bs-toggle="dropdown">
+          <div class="d-flex align-items-center justify-content-start dropdown dropdown-menu-end sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row w-100 p-2 align-items-center justify-content-start border-0 bg-account-card max-w-md-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
               <div class="d-flex flex-row justify-content-center align-items-center gap-8">
-                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar" />
+                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
                 <div class="d-flex flex-column w-200">
                   <span class="fw-medium text-white text-start text-16">Jennings Torp</span>
                   <span class="fw-normal text-white text-start text-14 opacity-0-5">Jennings_Torp@yahoo.com</span>
                 </div>
               </div>
-              <img src="./assets//svg/icon-arrow-right.svg" class="sidebar-link-arrow" alt="Arrow Right Icon" />
+              <img src="./assets//svg/icon-arrow-right.svg" class="sidebar-link-arrow" alt="Arrow Right Icon">
             </button>
             <ul class="dropdown-menu sub-menu-container">
               <li>
@@ -136,57 +128,45 @@
       <div class="d-none d-md-flex d-xxl-none sidebar-tablet-container flex-column pt-60 pb-60 gap-40 px-12">
         <div class="d-flex flex-column align-items-center justify-content-center sidebar-header gap-40">
           <button class="d-flex align-items-center justify-content-center sidebar-open-btn">
-            <img src="./assets/svg/icon-sidebar-right.svg" class="sidebar-open-icon" alt="Sidebar Open Icon" />
+            <img src="./assets/svg/icon-sidebar-right.svg" class="sidebar-open-icon" alt="Sidebar Open Icon">
           </button>
-          <img src="./assets/png/logo-tablet.png" class="max-w-40 max-height-40" alt="Tablet Logo" />
+          <img src="./assets/png/logo-tablet.png" class="max-w-40 max-height-40" alt="Tablet Logo">
         </div>
         <div class="d-flex flex-column gap-20">
-          <a href="index.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-home.svg" class="w-20 h-20" alt="Home Icon" />
+          <a href="index.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 active radius-8">
+            <img src="./assets/svg/icon-home.svg" class="w-20 h-20" alt="Home Icon">
           </a>
-          <a href="performance.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-book.svg" class="w-20 h-20" alt="Book Icon" />
+          <a href="physical-performance-dashboard.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-book.svg" class="w-20 h-20" alt="Book Icon">
           </a>
-          <a href="medical.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 active radius-8">
-            <img src="./assets/svg/icon-medical.svg" class="w-20 h-20" alt="Medical Icon" />
+          <a href="medical.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-medical.svg" class="w-20 h-20" alt="Medical Icon">
           </a>
-          <a href="players.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-player.svg" class="w-20 h-20" alt="Player Icon" />
+          <a href="players.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-player.svg" class="w-20 h-20" alt="Player Icon">
           </a>
-          <a href="calendar.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20" alt="Calendar Icon" />
+          <a href="calendar.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20" alt="Calendar Icon">
           </a>
-          <a href="news.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-document.svg" class="w-20 h-20" alt="Book Icon" />
+          <a href="news.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-document.svg" class="w-20 h-20" alt="Book Icon">
           </a>
-          <a href="messages.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-message.svg" class="w-20 h-20" alt="Message Icon" />
+          <a href="messages.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-message.svg" class="w-20 h-20" alt="Message Icon">
           </a>
-          <a href="surveys.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20" alt="Surveys Icon" />
+          <a href="surveys.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20" alt="Surveys Icon">
           </a>
           <div class="sidebar-sub-header-container text-center">
             <span class="fw-bold text-white text-10 opacity-0-7">Other</span>
           </div>
-          <a href="backoffice.html"
-            class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
-            <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20" alt="Puzzle Icon" />
+          <a href="backoffice.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20" alt="Puzzle Icon">
           </a>
-          <div
-            class="d-flex align-items-center justify-content-center dropdown dropend sidebar-account-container pt-20">
-            <button type="button"
-              class="d-flex flex-row p-2 align-items-center justify-content-center border-0 bg-account-card max-w-48 max-height-48 radius-100 dropdown-toggle"
-              data-bs-toggle="dropdown">
+          <div class="d-flex align-items-center justify-content-center dropdown dropend sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row p-2 align-items-center justify-content-center border-0 bg-account-card max-w-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
               <div class="d-flex flex-row justify-content-center align-items-center gap-8">
-                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar" />
+                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
               </div>
             </button>
             <ul class="dropdown-menu sub-menu-container">
@@ -234,22 +214,22 @@
       <!-- Content Area -->
       <div class="d-flex flex-column gap-40 align-items-center align-self-stretch justify-content-center">
         <div class="d-flex bg-news-details radius-12 position-relative min-h-380 w-100">
-          <div class="position-absolute w-100 h-100 bg-litegray-50"></div>
+          <div class="position-absolute w-100 h-100 bg-custom-litegray-50"></div>
         </div>
-        <div class="d-flex p-0-120 mt-negative-120 z-1 w-100">
-            <div class="d-flex flex-column p-40 gap-60 bg-white radius-12 w-100 border-E8ECF5">
+        <div class="d-flex p-0-120 mt-negative-120 z-1 w-100 mt-minus-120">
+            <div class="d-flex flex-column p-40 gap-60 bg-white radius-12 w-100 custom-card">
               <div class="d-flex gap-40 align-items-start align-self-stretch">
                 <div class="d-flex py-40 px-20 flex-column justify-content-center align-items-center gap-4px align-self-stretch bg-custom-breeze radius-10">
                   <span class="text-24 text-white">23</span>
                   <span class="text-20 text-white">sep</span>
                 </div>
-                <div class="d-flex flex-column align-items-start gap-8">
-                  <div class="tag success">Squad List</div>
+                <div class="d-flex flex-column align-items-start gap-24">
+                  <div class="tag success max-h-20">Squad List</div>
                   <div class="text-40">Squad List Announced for Upcoming Season</div>
                   <div class="text-16 opacity-0-5">Final Roster for 2024/2025 Season Confirmed</div>
                 </div>
               </div>
-              <div class="d-flex border-E8ECF5 w-100 border-top-0"></div>
+              <div class="d-flex custom-card w-100 border-top-0"></div>
               <div class="d-flex flex-column gap-40 ">
                 <div class="text-32">Quis ornare scelerisque a vivamus id. Urna adipiscing et hac elit auctor. </div>
                 <div class="text-20 lh-336">Quis ornare scelerisque a vivamus id. Urna adipiscing et hac elit auctor. Accumsan tincidunt accumsan cras tempus sollicitudin eget donec orci. Vitae bibendum netus pellentesque neque dictum nulla quisque nullam. Aliquet eget tellus in augue elementum felis libero. Commodo fermentum elit turpis quam enim dolor in phasellus purus.<br><br>

@@ -54,8 +54,11 @@ var options = {
     labels: [''],
 };
 
-var chart = new ApexCharts(document.querySelector("#raidal-bar-chart"), options);
-chart.render();
 
-const angle = (value / 10) * 180 - 90; // Map 0–100 to -90 to +90
-$("#needle-container").css("transform", `translateX(-50%) rotate(${angle}deg)`);
+if(document.querySelector("#raidal-bar-chart")) {
+    var chart = new ApexCharts(document.querySelector("#raidal-bar-chart"), options);
+    chart.render();
+
+    const angle = (value / 10) * 180 - 90; // Map 0–100 to -90 to +90
+    $("#needle-container").css("transform", `translateX(-50%) rotate(${angle}deg)`);
+}

@@ -1,0 +1,1962 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Survey - OPNPlay</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=SUSE:wght@100..800&display=swap" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/css/bootstrap-select.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet" />
+  <!-- <link href="https://cdn.jsdelivr.net/npm/fullcalendar@6.1.6/main.min.css" rel="stylesheet"> -->
+  <link rel="icon" type="image/x-icon" href="./assets/png/logo-tablet.png" />
+  <link href="./assets/css/standard.css" rel="stylesheet" />
+  <link href="./assets/css/dashboard.css" rel="stylesheet" />
+  <link href="./assets/css/sidebar.css" rel="stylesheet" />
+  <link href="./assets/css/main_content.css" rel="stylesheet" />
+  <link href="./assets/css/standard.css" rel="stylesheet" />
+  <link href="./assets/css/surveys.css" rel="stylesheet" />
+
+  <!-- Bootstrap JS and dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap-select@1.14.0-beta3/dist/js/bootstrap-select.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+</head>
+
+<body>
+  <div class="wrapper pt-24">
+    <!-- Sidebar -->
+    <div class="overflow-y-scroll position-fixed w-max-content sidebar-container main-container bg-custom-primary pb-60 z-2">
+      <div class="d-none d-xxl-flex flex-column sidebar-desktop-container pt-60 pb-60 gap-40 px-20">
+        <div class="d-flex align-items-center justify-content-between sidebar-header pl-20 gap-40">
+          <img src="./assets/png/logo.png" class="logo" alt="Logo">
+          <button class="d-none d-md-block d-xxl-none align-items-center justify-content-center sidebar-close-btn">
+            <img src="./assets/svg/icon-sidebar-left.svg" class="sidebar-close-icon" alt="Sidebar Close Icon">
+          </button>
+        </div>
+        <div class="d-flex flex-column gap-20">
+          <a href="index.html" class="d-flex flex-row sidebar-link-container py-12 px-20 active radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="./assets/svg/icon-home.svg" class="w-20 h-20 w-12 h-12" alt="Home Icon">
+              <span class="fw-medium text-white text-16">Home</span>
+            </div>
+          </a>
+          <a href="physical-performance-dashboard.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
+              <span class="fw-medium text-white text-16">Physical Performance</span>
+            </div>
+          </a>						
+          <a href="medical.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="./assets/svg/icon-medical.svg" class="w-20 h-20 w-12 h-12" alt="Medical Icon">
+              <span class="fw-medium text-white text-16">Medical</span>
+            </div>
+          </a>
+          <a href="players.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
+              <span class="fw-medium text-white text-16">Players</span>
+            </div>
+          </a>
+          <a href="calendar.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20 w-12 h-12" alt="Calendar Icon">
+              <span class="fw-medium text-white text-16">Calendar</span>
+            </div>
+          </a>
+          <a href="news.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="./assets/svg/icon-player.svg" class="w-20 h-20 w-12 h-12" alt="Player Icon">
+              <span class="fw-medium text-white text-16">News</span>
+            </div>
+          </a>
+          <a href="messages.html" class="d-flex flex-row justify-content-between align-items-center sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="./assets/svg/icon-message.svg" class="w-20 h-20 w-12 h-12" alt="Message Icon">
+              <span class="fw-medium text-white text-16">Messages</span>
+            </div>
+            <span class="d-none d-xxl-flex p-1 align-items-center fw-bold sidebar-link-notification-text text-8 radius-100">2433</span>
+          </a>
+          <a href="surveys.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20 w-12 h-12" alt="Surveys Icon">
+              <span class="fw-medium text-white text-16">Surveys</span>
+            </div>
+          </a>
+          <div class="sidebar-sub-header-container text-xxl-start pt-20 px-20">
+            <span class="fw-bold text-white text-10 opacity-0-7">Other</span>
+          </div>
+          <a href="backoffice.html" class="d-flex flex-row sidebar-link-container py-12 px-20 radius-8">
+            <div class="d-flex flex-row align-items-center gap-12">
+              <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20 w-12 h-12" alt="Puzzle Icon">
+              <span class="fw-medium text-white text-16">Backoffice</span>
+            </div>
+          </a>
+          <div class="d-flex align-items-center justify-content-start dropdown dropdown-menu-end sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row w-100 p-2 align-items-center justify-content-start border-0 bg-account-card max-w-md-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
+              <div class="d-flex flex-row justify-content-center align-items-center gap-8">
+                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
+                <div class="d-flex flex-column w-200">
+                  <span class="fw-medium text-white text-start text-16">Jennings Torp</span>
+                  <span class="fw-normal text-white text-start text-14 opacity-0-5">Jennings_Torp@yahoo.com</span>
+                </div>
+              </div>
+              <img src="./assets//svg/icon-arrow-right.svg" class="sidebar-link-arrow" alt="Arrow Right Icon">
+            </button>
+            <ul class="dropdown-menu sub-menu-container">
+              <li>
+                <a class="dropdown-item text-white" href="profile.html">My Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="logout.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <span class="fw-normal text-white text-14 opacity-0-4">© 2024, All Rights Reserved</span>
+      </div>
+      <div class="d-none d-md-flex d-xxl-none sidebar-tablet-container flex-column pt-60 pb-60 gap-40 px-12">
+        <div class="d-flex flex-column align-items-center justify-content-center sidebar-header gap-40">
+          <button class="d-flex align-items-center justify-content-center sidebar-open-btn">
+            <img src="./assets/svg/icon-sidebar-right.svg" class="sidebar-open-icon" alt="Sidebar Open Icon">
+          </button>
+          <img src="./assets/png/logo-tablet.png" class="max-w-40 max-height-40" alt="Tablet Logo">
+        </div>
+        <div class="d-flex flex-column gap-20">
+          <a href="index.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 active radius-8">
+            <img src="./assets/svg/icon-home.svg" class="w-20 h-20" alt="Home Icon">
+          </a>
+          <a href="physical-performance-dashboard.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-book.svg" class="w-20 h-20" alt="Book Icon">
+          </a>
+          <a href="medical.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-medical.svg" class="w-20 h-20" alt="Medical Icon">
+          </a>
+          <a href="players.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-player.svg" class="w-20 h-20" alt="Player Icon">
+          </a>
+          <a href="calendar.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-calendar.svg" class="w-20 h-20" alt="Calendar Icon">
+          </a>
+          <a href="news.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-document.svg" class="w-20 h-20" alt="Book Icon">
+          </a>
+          <a href="messages.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-message.svg" class="w-20 h-20" alt="Message Icon">
+          </a>
+          <a href="surveys.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-opened-document.svg" class="w-20 h-20" alt="Surveys Icon">
+          </a>
+          <div class="sidebar-sub-header-container text-center">
+            <span class="fw-bold text-white text-10 opacity-0-7">Other</span>
+          </div>
+          <a href="backoffice.html" class="d-flex justify-content-between align-items-center sidebar-link-container p-18 radius-8">
+            <img src="./assets/svg/icon-puzzle.svg" class="w-20 h-20" alt="Puzzle Icon">
+          </a>
+          <div class="d-flex align-items-center justify-content-center dropdown dropend sidebar-account-container pt-20">
+            <button type="button" class="d-flex flex-row p-2 align-items-center justify-content-center border-0 bg-account-card max-w-48 max-height-48 radius-100 dropdown-toggle" data-bs-toggle="dropdown">
+              <div class="d-flex flex-row justify-content-center align-items-center gap-8">
+                <img src="./assets/png/default-avatar.png" class="mini-avatar radius-100" alt="Account Avatar">
+              </div>
+            </button>
+            <ul class="dropdown-menu sub-menu-container">
+              <li>
+                <a class="dropdown-item text-white" href="profile.html">My Profile</a>
+              </li>
+              <li>
+                <a class="dropdown-item text-white" href="logout.html">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div
+      class="d-flex flex-column h-100 position-fixed overflow-y-scroll overflow-x-hidden main-content-container main-container ml-xxl-332 ml-md-80 p-40 radius-tl-br-20 gap-40">
+      <!-- Header -->
+      <div class="d-flex flex-row justify-content-between align-items-center">
+        <div class="d-flex flex-row align-items-center gap-20">
+          <img src="./assets/png/team-logo.png" class="team-logo" alt="Team Icon" />
+          <span class="fw-medium text-40">Manage Surveys</span>
+        </div>
+        <div class="d-flex flex-row align-items-center gap-12">
+          <button type="button"
+            class="d-flex align-items-center bg-white border-0 position-relative header-icon-container p-18 radius-100"
+            data-bs-toggle="modal" data-bs-target="#notification-modal">
+            <img src="./assets/svg/icon-dot.svg" class="position-absolute header-dot-icon" alt="Online Status Icon" />
+            <img src="./assets/svg/icon-notification-bing.svg" class="header-icon" alt="Notification Icon" />
+          </button>
+          <span data-bs-toggle="modal" data-bs-target="#create-new-post-modal"
+            class="d-flex align-items-center bg-white position-relative header-icon-container p-18 radius-100">
+            <img src="./assets/svg/icon-dot.svg" class="position-absolute header-dot-icon" alt="Online Status Icon" />
+            <img src="./assets/svg/icon-message-text.svg" class="header-icon" alt="Message Icon" />
+          </span>
+        </div>
+      </div>
+
+      <!-- Content Area -->
+      <div class="d-flex gap-12 align-items-start align-self-stretch">
+        <div class="col-5">
+          <div class="d-flex p-40 gap-24 flex-column custom-card radius-12 bg-white">
+            <div class="text-20">Recently Completed Surveys</div>
+            <div class="d-flex flex-column has-scrollbar gap-4px radius-12 h-875">
+              <div class="d-flex p-12 bg-custom-gradient-primary justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md" data-bs-toggle="modal" data-bs-target="#create-survey-modal2">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md" data-bs-toggle="modal" data-bs-target="#wellness-survey-modal1">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md" data-bs-toggle="modal" data-bs-target="#wellness-survey-modal2">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+              <div class="d-flex p-12 survey-item justify-content-between align-items-center align-self-stretch custom-card bg-custom-gradient-primary radius-12">
+                <div class="d-flex gap-12 align-items-center">
+                  <div class="d-flex px-14 py-12 flex-column gap-4px justify-content-center align-items-start bg-mini-card-cyan-success">
+                    <div class="text-20 text-strong-teal">23</div>
+                    <div class="text-14 text-strong-teal">sep</div>
+                  </div>
+                  <div class="text-16">Survey Name</div>
+                </div>
+                <div class="btn btn-white btn-md">
+                  <i class="bi bi-arrows-angle-expand"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-7">
+          <div class="d-flex p-20 gap-20 flex-column custom-card radius-12 bg-white">
+            <div class="d-flex justify-content-between align-items-center align-self-stretch">
+              <div class="text-20">My Surveys</div>
+              <span class="btn btn-default btn-md" data-bs-toggle="modal" data-bs-target="#create-survey-modal">
+                <i class="bi bi-plus"></i><span>Add Survey</span>
+              </span>
+            </div>
+            <div class="d-flex flex-column has-scrollbar gap-4px radius-12 h-875 p-20">
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex p-20 justify-content-between align-items-center align-self-stretch radius-12 bg-custom-gradient-primary custom-card">
+                <div class="text-16">Survey Name</div>
+                <div class="d-flex gap-12 justify-content-center align-items-center">
+                  <div class="d-flex justify-content-end p-4px align-items-center">
+      				      <div class="d-flex align-items-center p-12 gap-12 radius-8 bg-green-light ">
+        							<span class="fw-medium line-height-100 text-16 text-nowrap">Survey Active</span>
+        							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+        								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+        							</div>
+        						</div>
+      				    </div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-pencil-square"></i></div>
+      				    <div class="btn btn-white btn-md "><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Notification Modal -->
+  <div class="modal" id="notification-modal">
+    <div class="modal-dialog modal-notifications modal-dialog-scrollable">
+      <div class="modal-content d-flex flex-column h-100 gap-20 p-20 w-587 h-702 radius-12">
+        <!-- Modal Header -->
+        <div class="d-flex align-items-center justify-content-between">
+          <span class="fw-medium text-20">Notifications</span>
+          <button type="button"
+            class="btn-close d-flex align-items-center justify-content-center max-w-56 max-height-56 p-18 radius-100 border-tab-empty"
+            data-bs-dismiss="modal">
+            <img src="./assets/svg/icon-close.svg" class="w-20 h-20" alt="Modal Close Icon" />
+          </button>
+        </div>
+
+        <div class="d-flex flex-column flex-grow-1 gap-2 custom-tab-content max-height-586">
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-matthew-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">New Message</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Cameron Evans</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success">Edited</span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              Status Change
+              <span
+                class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ACWR
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">1.56</span>
+            </span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">-15
+              Points</span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ACWR
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">1.56</span>
+            </span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-anthony-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Daily Wellness</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold text-white bg-custom-alert p-6 text-12 radius-5 max-height-20">Injured</span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-matthew-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">New Message</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-anthony-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Daily Wellness</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold text-white bg-custom-alert p-6 text-12 radius-5 max-height-20">Injured</span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Cameron Evans</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success">Edited</span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Cameron Evans</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span
+                class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success">Below
+                Goal</span>
+              <div class="mini-warning-chart w-43 h-43"></div>
+            </div>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Rehabilitation</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-success p-6 text-12 text-cyan-success radius-5 max-height-20 border-btn-success">Completed</span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Player Update</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              Status Change
+              <span
+                class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">S&C</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">Incomplete</span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Custom Alert</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">Load
+              Management</span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Aaron Wildig</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div class="mini-success-chart w-43 h-43"></div>
+            </div>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span
+                class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-warning radius-5 max-height-20 bg-custom-warning border-btn-success">Below
+                Goal</span>
+              <div class="mini-warning-chart w-43 h-43"></div>
+            </div>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span
+                class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 bg-custom-error border-btn-success">Low
+                Score</span>
+              <div class="mini-alert-chart w-43 h-43"></div>
+            </div>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Score</span>
+                <span class="fw-medium text-black text-16">Nick Townsend</span>
+              </div>
+            </div>
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <span
+                class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 bg-custom-error border-btn-success">Missed
+                Priority</span>
+              <div class="mini-alert-chart w-43 h-43"></div>
+            </div>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-success p-6 text-12 text-cyan-success radius-5 max-height-20 border-tab-error">
+              Status Change
+              <span
+                class="d-flex align-items-center justify-content-center text-strong-success text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-purple p-6 text-12 text-cyan-purple radius-5 max-height-20 border-tab-error">
+              Status Change
+              <span
+                class="d-flex align-items-center justify-content-center text-strong-purple text-12 pl-10">Unavailable</span>
+            </span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ERTTD Change
+              <span
+                class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">30/10/25</span>
+            </span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">Overdue
+              by 8 Days</span>
+          </a>
+          <a href="#"
+            class="d-flex flex-row align-items-center justify-content-between p-2 custom-card mini-card-bg-gradient max-height-58 radius-12">
+            <div class="d-flex flex-row align-items-center justify-content-center gap-12">
+              <div
+                class="d-flex flex-column align-items-center justify-content-center bg-custom-breeze radius-5 min-w-40 min-height-42">
+                <span class="fw-bold text-white text-14 line-height-80">23</span>
+                <span class="fw-medium text-white text-12 line-height-80">sep</span>
+              </div>
+              <div class="max-w-40 max-height-40 bg-avatar-warning radius-100">
+                <img src="./assets/png/avatar-jacob-bigger.png" class="small-avatar radius-100 object-fit-cover"
+                  alt="Player Avatar" />
+              </div>
+              <div class="d-flex flex-column">
+                <span class="fw-medium text-12 text-neutral">Recovery Points</span>
+                <span class="fw-medium text-black text-16">Jacob Carney</span>
+              </div>
+            </div>
+            <span
+              class="d-flex align-items-center fw-bold bg-custom-error p-6 text-12 text-cyan-error radius-5 max-height-20 border-tab-error">
+              ACWR
+              <span class="d-flex align-items-center justify-content-center text-strong-error text-12 pl-10">1.56</span>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Create Survey Modal Type 1 -->
+  <div class="modal fullpage" id="create-survey-modal">
+    <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-40 min-w-960">
+        <div class="d-flex flex-column gap-40 flex-column align-items-start">
+          <div class="d-flex justify-content-between align-items-center align-self-stretch">
+            <div class="text-32">Create New Survey</div>
+            <span class="btn btn-default btn-lg">Publish Survey</span>
+          </div>
+          <div class="d-flex align-items-end gap-20 align-self-stretch">
+            <div class="w-100">
+              <label class="form-label">Survey Title</label>
+              <input type="text" class="form-control p-20 " placeholder="Survey Title">
+            </div>
+            <div class="d-flex align-items-center p-12 gap-24 radius-8 bg-green-light h-68">
+							<span class="fw-medium line-height-100 text-14 text-nowrap">Survey Active</span>
+							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+							</div>
+						</div>
+          </div>
+          <div class="w-100">
+            <label class="form-label">Survey Frequency</label>
+            <select class="form-control p-20" placeholder="Select Frequency">
+              <option value="">Survey Frequency</option>
+            </select>
+          </div>
+          <div class="d-flex w-100">
+            <div class="col-6">
+              <label class="form-label">Required Completion Time</label>
+              <select class="form-control p-20">
+                <option value="">08:30</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label class="form-label ">Push Notification Time if Incomplete</label>
+              <select class="form-control p-20">
+                <option value="">08:30</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex w-100 radius-12 border-form-control p-20 bg-custom-gradient-primary">
+            <label class="custom-checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              Make responses anonymous
+            </label>
+          </div>
+          <div class="d-flex flex-column gap-10 p-20 radius-12 bg-custom-strong-gray w-100">
+            <div class="text-16">Questions</div>
+            <div class="d-flex flex-column gap-10 question-list radius-12 w-100">
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-center w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex gap-20 align-items-end flex-grow-1">
+                  <div class="d-flex flex-column align-items-start justify-content-center py-20">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-grow-1 flex-column">
+                    <label class="form-label">Question</label>
+                    <input type="text" placeholder="Hours of Sleep" class="form-control px-20 py-12">
+                  </div>
+                  <div class="d-flex flex-column flex-grow-1">
+                    <label class="form-label">Measurement</label>
+                    <select class="form-select w-100 px-20 py-12">
+                      <option value="">Hours(N/A)</option>
+                    </select>
+                  </div>
+                  <div class="d-flex flex-grow-1 bg-mini-card-cyan-success px-20 py-12 gap-4px align-items-center justify-content-center">
+                    <i class="bi bi-share"></i>
+                    <div class="text-14">Connected to Hours of Sleep</div>
+                  </div>
+                </div>
+                <div class="btn btn-white btn-lg px-12 py-20"><i class="bi bi-trash"></i></div>
+              </div>
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-center w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex gap-20 align-items-end flex-1-0-0">
+                  <div class="d-flex flex-column align-items-start justify-content-center py-20">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-grow-1 flex-column">
+                    <label class="form-label">Question</label>
+                    <input type="text" placeholder="Mood" class="form-control px-20 py-12">
+                  </div>
+                  <div class="d-flex flex-column flex-grow-1">
+                    <label class="form-label">Measurement</label>
+                    <select class="form-select w-100 px-20 py-12">
+                      <option value="">Units</option>
+                    </select>
+                  </div>
+                  <div class="d-flex flex-grow-1">
+                    <select  class="form-select fw-semibold	text-14 w-100 bg-mini-card-cyan-success px-20 py-12 justify-content-center align-items-center gap-4px border-0">
+                      <option value="">Connect to Data Point</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="btn btn-white btn-lg px-12 py-20"><i class="bi bi-trash"></i></div>
+              </div>
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-center w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex gap-20 align-items-end flex-1-0-0">
+                  <div class="d-flex flex-column align-items-start justify-content-center py-20">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-grow-1 flex-column">
+                    <label class="form-label">Question</label>
+                    <input type="text" placeholder="Mood" class="form-control px-20 py-12">
+                  </div>
+                  <div class="d-flex min-w-200">
+                    <select  class="form-select fw-semibold	text-14 w-100 bg-mini-card-cyan-success px-20 py-12 justify-content-center align-items-center gap-4px border-0">
+                      <option value="">Connect to Data Point</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="btn btn-white btn-lg px-12 py-20"><i class="bi bi-trash"></i></div>
+              </div>
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-start w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex align-items-start gap-20 flex-grow-1 ">
+                  <div class="d-flex align-items-start ">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-column w-100 gap-20 justify-content-center align-items-start flex-grow-1">
+                    <div class="d-flex gap-20 align-items-end align-self-stretch">
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Question</label>
+                        <input type="text" class="form-control px-20 py-12 w-100" placeholder="Which areas did you train today?">
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Measurement</label>
+                        <select class="form-select px-20 py-12 w-100" placeholder="Which areas did you train today?">
+                          <option value="">Multiple Choice</option>
+                        </select>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 ">
+                        <select class="form-select px-20 border-0 py-12 w-100 bg-mini-card-cyan-success" placeholder="Which areas did you train today?">
+                          <option value="">Connect to Data Point</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column gap-4px align-self-stretch align-items-start ">
+                      <div class="d-flex p-12 gap-12 align-self-stretch justify-content-end align-items-center">
+                        <div class="py-12"><img src="./assets/svg/icon-six-dots.svg"></div>
+                        <div class="py12 d-flex align-items-center justify-content-center">
+                          <input class="form-check-input w-20 h-20" type="checkbox" >
+                        </div>
+                        <div class="d-flex flex-column align-items-start gap-8 flex-grow-1">
+                          <input type="text" class="form-control p-14" placeholder="Strength">
+                        </div>
+                      </div>
+                      <div class="d-flex p-12 gap-12 align-self-stretch justify-content-end align-items-center">
+                        <div class="py-12"><img src="./assets/svg/icon-six-dots.svg"></div>
+                        <div class="py12 d-flex align-items-center justify-content-center">
+                          <input class="form-check-input w-20 h-20" type="checkbox" >
+                        </div>
+                        <div class="d-flex flex-column align-items-start gap-8 flex-grow-1">
+                          <input type="text" class="form-control p-14" placeholder="Speed">
+                        </div>
+                      </div>
+                      <div class="d-flex p-12 gap-12 align-self-stretch justify-content-end align-items-center">
+                        <div class="py-12"><img src="./assets/svg/icon-six-dots.svg"></div>
+                        <div class="py12 d-flex align-items-center justify-content-center">
+                          <input class="form-check-input w-20 h-20" type="checkbox" >
+                        </div>
+                        <div class="d-flex flex-column align-items-start gap-8 flex-grow-1">
+                          <input type="text" class="form-control p-14" placeholder="Endurance">
+                        </div>
+                      </div>
+                      <div class="d-flex p-12 gap-12 align-self-stretch justify-content-end align-items-center">
+                        <div class="py-12"><img src="./assets/svg/icon-six-dots.svg"></div>
+                        <div class="py12 d-flex align-items-center justify-content-center">
+                          <input class="form-check-input w-20 h-20" type="checkbox" >
+                        </div>
+                        <div class="d-flex flex-column align-items-start gap-8 flex-grow-1">
+                          <input type="text" class="form-control p-14" placeholder="Technical Skills">
+                        </div>
+                      </div>
+                      <div class="d-flex gap-4px p-12 text-teal align-items-center justify-content-center">
+                        <i class="bi bi-plus"></i>
+                        <span class="text-12">Add option</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="btn btn-white btn-lg px-12 py-20"><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-start w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex align-items-start gap-20 flex-grow-1 ">
+                  <div class="d-flex align-items-start ">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-column w-100 gap-20 justify-content-center align-items-start flex-grow-1">
+                    <div class="d-flex gap-20 align-items-end align-self-stretch">
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Question</label>
+                        <input type="text" class="form-control px-20 py-12 w-100" placeholder="Which areas did you train today?">
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Measurement</label>
+                        <select class="form-select px-20 py-12 w-100" placeholder="Which areas did you train today?">
+                          <option value="">Single Choice</option>
+                        </select>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 ">
+                        <select class="form-select px-20 border-0 py-12 w-100 bg-mini-card-cyan-success" placeholder="Which areas did you train today?">
+                          <option value="">Connect to Data Point</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column gap-4px align-self-stretch align-items-start ">
+                      <div class="d-flex p-12 gap-12 align-self-stretch justify-content-end align-items-center">
+                        <div class="py-12"><img src="./assets/svg/icon-six-dots.svg"></div>
+                        <div class="py12 d-flex align-items-center justify-content-center">
+                          <input class="form-check-input w-20 h-20" type="radio" >
+                        </div>
+                        <div class="d-flex flex-column align-items-start gap-8 flex-grow-1">
+                          <input type="text" class="form-control p-14" placeholder="Strength">
+                        </div>
+                      </div>
+                      <div class="d-flex p-12 gap-12 align-self-stretch justify-content-end align-items-center">
+                        <div class="py-12"><img src="./assets/svg/icon-six-dots.svg"></div>
+                        <div class="py12 d-flex align-items-center justify-content-center">
+                          <input class="form-check-input w-20 h-20" type="radio" >
+                        </div>
+                        <div class="d-flex flex-column align-items-start gap-8 flex-grow-1">
+                          <input type="text" class="form-control p-14" placeholder="Speed">
+                        </div>
+                      </div>
+                      <div class="d-flex p-12 gap-12 align-self-stretch justify-content-end align-items-center">
+                        <div class="py-12"><img src="./assets/svg/icon-six-dots.svg"></div>
+                        <div class="py12 d-flex align-items-center justify-content-center">
+                          <input class="form-check-input w-20 h-20" type="radio" >
+                        </div>
+                        <div class="d-flex flex-column align-items-start gap-8 flex-grow-1">
+                          <input type="text" class="form-control p-14" placeholder="Endurance">
+                        </div>
+                      </div>
+                      <div class="d-flex p-12 gap-12 align-self-stretch justify-content-end align-items-center">
+                        <div class="py-12"><img src="./assets/svg/icon-six-dots.svg"></div>
+                        <div class="py12 d-flex align-items-center justify-content-center">
+                          <input class="form-check-input w-20 h-20" type="radio" >
+                        </div>
+                        <div class="d-flex flex-column align-items-start gap-8 flex-grow-1">
+                          <input type="text" class="form-control p-14" placeholder="Technical Skills">
+                        </div>
+                      </div>
+                      <div class="d-flex gap-4px p-12 text-teal align-items-center justify-content-center">
+                        <i class="bi bi-plus"></i>
+                        <span class="text-12">Add option</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="btn btn-white btn-lg px-12 py-20"><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-start w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex align-items-start gap-20 flex-grow-1 ">
+                  <div class="d-flex align-items-start ">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-column w-100 gap-20 justify-content-center align-items-start flex-grow-1">
+                    <div class="d-flex gap-20 align-items-end align-self-stretch">
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Question</label>
+                        <input type="text" class="form-control px-20 py-12 w-100" placeholder="Additional comments about today's training">
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Measurement</label>
+                        <select class="form-select px-20 py-12 w-100" placeholder="Which areas did you train today?">
+                          <option value="">Free Text</option>
+                        </select>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 ">
+                        <select class="form-select px-20 border-0 py-12 w-100 bg-mini-card-cyan-success" placeholder="Which areas did you train today?">
+                          <option value="">Connect to Data Point</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex flex-column gap-4px align-self-stretch align-items-start ">
+                      <textarea class="form-control" rows="5" placeholder="Player's response will appear here...."></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="btn btn-white btn-lg px-12 py-20" ><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-start w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex align-items-start gap-20 flex-grow-1 ">
+                  <div class="d-flex align-items-start ">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-column w-100 gap-20 justify-content-center align-items-start flex-grow-1">
+                    <div class="d-flex gap-20 align-items-end align-self-stretch">
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Question</label>
+                        <input type="text" class="form-control px-20 py-12 w-100" placeholder="Rate your energy level today">
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Measurement</label>
+                        <select class="form-select px-20 py-12 w-100" placeholder="Which areas did you train today?">
+                          <option value="">Scale(1-10)</option>
+                        </select>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 ">
+                        <select class="form-select px-20 border-0 py-12 w-100 bg-mini-card-cyan-success" placeholder="Which areas did you train today?">
+                          <option value="">Connect to Data Point</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-4px align-self-stretch align-items-start ">
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">1</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">2</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">3</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">4</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-custom-brand border-tab-empty text-white radius-8">5</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">6</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">7</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">8</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">9</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">10</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="btn btn-white btn-lg px-12 py-20" ><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-start w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex align-items-start gap-20 flex-grow-1 ">
+                  <div class="d-flex align-items-start ">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-column w-100 gap-20 justify-content-center align-items-start flex-grow-1">
+                    <div class="d-flex gap-20 align-items-end align-self-stretch">
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Question</label>
+                        <input type="text" class="form-control px-20 py-12 w-100" placeholder="How is your recovery status?">
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1">
+                        <label class="form-label">Measurement</label>
+                        <select class="form-select px-20 py-12 w-100" placeholder="Which areas did you train today?">
+                          <option value="">Scale(1-5)</option>
+                        </select>
+                      </div>
+                      <div class="d-flex flex-column flex-grow-1 ">
+                        <select class="form-select px-20 border-0 py-12 w-100 bg-mini-card-cyan-success" placeholder="Which areas did you train today?">
+                          <option value="">Connect to Data Point</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="d-flex gap-4px align-self-stretch align-items-start ">
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">1</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">2</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">3</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-white border-tab-empty radius-8">4</div>
+                      <div class="d-flex px-32 py-20 justify-content-center align-items-center flex-grow-1 bg-custom-brand border-tab-empty text-white radius-8">5</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                  <div class="btn btn-white btn-lg px-12 py-20" ><i class="bi bi-trash"></i></div>
+                </div>
+              </div>
+              
+              <div class="d-flex px-32 py-20 gap-4px justify-content-center align-items-center align-self-stretch bg-white radius-8 border-tab-empty">
+                <i class="bi bi-plus text-16"></i>
+                <span class="text-16">Add Question</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+  <!-- Creaet Survey Modal Type 2 -->
+  <div class="modal fullpage" id="create-survey-modal2">
+    <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-40 w-960">
+        <div class="d-flex flex-column gap-40 flex-column align-items-start">
+          <div class="d-flex justify-content-between align-items-center align-self-stretch">
+            <div class="text-32">Create New Survey</div>
+            <span class="btn btn-default btn-lg">Publish Survey</span>
+          </div>
+          <div class="d-flex align-items-end gap-20 align-self-stretch">
+            <div class="w-100">
+              <label class="form-label">Survey Title</label>
+              <input type="text" class="form-control p-20 " placeholder="Survey Title">
+            </div>
+            <div class="d-flex align-items-center p-12 gap-24 radius-8 bg-green-light h-68">
+							<span class="fw-medium line-height-100 text-14 text-nowrap">Survey Active</span>
+							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+							</div>
+						</div>
+          </div>
+          <div class="w-100">
+            <label class="form-label">Survey Frequency</label>
+            <select class="form-control p-20" placeholder="Select Frequency">
+              <option value="">Survey Frequency</option>
+            </select>
+          </div>
+          
+          <div class="d-flex p-20 align-items-start align-self-stretch gap-12 w-100">
+            
+            <div class="d-flex gap-4px p-12 radius-8 border-tab-empty justify-content-between align-items-center flex-grow-1 align-items-center">
+              <div class="text-12">Mon</div>
+              <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
+            </div>
+            <div class="d-flex gap-4px p-12 radius-8 border-tab-empty justify-content-between align-items-center flex-grow-1 align-items-center">
+              <div class="text-12">Tue</div>
+              <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
+            </div>
+            <div class="d-flex gap-4px p-12 radius-8 border-tab-empty justify-content-between align-items-center flex-grow-1 align-items-center">
+              <div class="text-12">Wed</div>
+              <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
+            </div>
+            <div class="d-flex gap-4px p-12 radius-8 border-tab-empty justify-content-between align-items-center flex-grow-1 align-items-center">
+              <div class="text-12">Thu</div>
+              <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
+            </div>
+            <div class="d-flex gap-4px p-12 radius-8 border-tab-empty justify-content-between align-items-center flex-grow-1 align-items-center">
+              <div class="text-12">Fri</div>
+              <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
+            </div>
+            <div class="d-flex gap-4px p-12 radius-8 border-tab-empty justify-content-between align-items-center flex-grow-1 align-items-center">
+              <div class="text-12">Sat</div>
+              <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
+            </div>
+            <div class="d-flex p-12 gap-4px radius-8 border-tab-empty justify-content-between align-items-center flex-grow-1 align-items-center">
+              <div class="text-12">Sun</div>
+              <div class="d-flex align-items-center p-4px radius-8 bg-green-light">
+  							<div class="d-flex align-items-center h-20 w-32 bg-custom-cyan-neutral rounded-1 position-relative custom-toggle active" onclick="this.classList.toggle('active')">
+  								<div class="position-absolute w-12 h-12 bg-custom-toggle-neutral radius-2-px top-4 left-4 toggle-indicator"></div>
+  							</div>
+  						</div>
+            </div>
+          </div>
+          
+          <div class="d-flex w-100">
+            <div class="col-6">
+              <label class="form-label">Required Completion Time</label>
+              <select class="form-control p-20">
+                <option value="">08:30</option>
+              </select>
+            </div>
+            <div class="col-6">
+              <label class="form-label ">Push Notification Time if Incomplete</label>
+              <select class="form-control p-20">
+                <option value="">08:30</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex w-100 radius-12 border-form-control p-20 bg-custom-gradient-primary">
+            <label class="custom-checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              Make responses anonymous
+            </label>
+          </div>
+          <div class="d-flex flex-column gap-10 p-20 radius-12 bg-custom-strong-gray w-100">
+            <div class="text-16">Questions</div>
+            <div class="d-flex flex-column gap-10 question-list radius-12 w-100">
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-center w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex gap-20 align-items-end flex-grow-1">
+                  <div class="d-flex flex-column align-items-start justify-content-center py-20">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-grow-1 flex-column">
+                    <label class="form-label">Question</label>
+                    <input type="text" placeholder="Hours of Sleep" class="form-control px-20 py-12">
+                  </div>
+                  <div class="d-flex flex-column flex-grow-1">
+                    <label class="form-label">Measurement</label>
+                    <select class="form-select w-100 px-20 py-12">
+                      <option value="">Hours(N/A)</option>
+                    </select>
+                  </div>
+                  <div class="d-flex flex-grow-1 bg-mini-card-cyan-success px-20 py-12 gap-4px align-items-center justify-content-center">
+                    <i class="bi bi-share"></i>
+                    <div class="text-14">Connected to Hours of Sleep</div>
+                  </div>
+                </div>
+                <div class="btn btn-white btn-lg px-12 py-20"><i class="bi bi-trash"></i></div>
+              </div>
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-center w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex gap-20 align-items-end flex-1-0-0">
+                  <div class="d-flex flex-column align-items-start justify-content-center py-20">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-grow-1 flex-column">
+                    <label class="form-label">Question</label>
+                    <input type="text" placeholder="Custom" class="form-control px-20 py-12">
+                  </div>
+                  <div class="d-flex flex-column flex-grow-1">
+                    <label class="form-label">Measurement</label>
+                    <select class="form-select w-100 px-20 py-12">
+                      <option value="">Measurement (kg)</option>
+                    </select>
+                  </div>
+                  <div class="d-flex flex-grow-1">
+                    <select  class="form-select fw-semibold	text-14 w-100 bg-mini-card-cyan-success px-20 py-12 justify-content-center align-items-center gap-4px border-0">
+                      <option value="">Connect to Data Point</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="btn btn-white btn-lg px-12 py-20"><i class="bi bi-trash"></i></div>
+              </div>
+              <div class="d-flex gap-40 p-20 bg-custom-gradient-primary align-items-center w-100 justify-content-end align-self-stretch radius-12 custom-card">
+                <div class="d-flex gap-20 align-items-end flex-1-0-0">
+                  <div class="d-flex flex-column align-items-start justify-content-center py-20">
+                    <img src="./assets/svg/icon-six-dots.svg">
+                  </div>
+                  <div class="d-flex flex-grow-1 flex-column">
+                    <label class="form-label">Question</label>
+                    <input type="text" placeholder="Mood" class="form-control px-20 py-12">
+                  </div>
+                  <div class="d-flex min-w-200">
+                    <select  class="form-select fw-semibold	text-14 w-100 bg-mini-card-cyan-success px-20 py-12 justify-content-center align-items-center gap-4px border-0">
+                      <option value="">Add Data Component</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="btn btn-white btn-lg px-12 py-20"><i class="bi bi-trash"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>    
+  </div>
+  <!-- Wellness Survey Modal Type 1 -->
+  <div class="modal fullpage" id="wellness-survey-modal1">
+    <button type="button" class="btn-close position-absolute max-w-56 max-height-56 p-18 radius-100 border-tab-empty text-white " data-bs-dismiss="modal"></button>
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content p-40 w-960">
+        <div class="d-flex gap-40 flex-column w-100">
+          <div class="d-flex justify-content-between align-items-center align-self-stretch">
+            <div class="text-32">Wellness Survey 16/09</div>
+          </div>
+          <div class="d-flex flex-column gap-12 align-items-start align-self-stretch">
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
+              <div class="d-flex gap-12 align-items-center">
+                <img src="./assets/svg/user1.svg">
+                <div class="d-flex flex-column gap-8">
+                  <div class="text-20">Jacob Carney</div>
+                  <div class="tag success text-cyan-success text-12">Goalkeeper</div>
+                </div>
+              </div>
+              <div class="d-flex p-12 justify-content-center align-items-center radius-5 bg-custom-success border-btn-success">
+                <div class="text-16 text-cyan-success">Completed</div>
+              </div>
+            </div>
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
+              <div class="d-flex gap-12 align-items-center">
+                <img src="./assets/svg/user2.svg">
+                <div class="d-flex flex-column gap-8">
+                  <div class="text-20">Antony Glennon</div>
+                  <div class="tag purple text-cyan-purple text-12">Defender</div>
+                </div>
+              </div>
+              <div class="d-flex p-12 justify-content-center align-items-center radius-5 bg-custom-success border-btn-success">
+                <div class="text-16 text-cyan-success">Completed</div>
+              </div>
+            </div>
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
+              <div class="d-flex gap-12 align-items-center">
+                <img src="./assets/svg/user3.svg">
+                <div class="d-flex flex-column gap-8">
+                  <div class="text-20">Matthew Baker</div>
+                  <div class="tag purple text-cyan-purple text-12">Defender</div>
+                </div>
+              </div>
+              <div class="d-flex p-12 justify-content-center align-items-center radius-5 bg-custom-success border-btn-success">
+                <div class="text-16 text-cyan-success">Completed</div>
+              </div>
+            </div>
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
+              <div class="d-flex gap-12 align-items-center">
+                <img src="./assets/svg/user4.svg">
+                <div class="d-flex flex-column gap-8">
+                  <div class="text-20">Jacob Carney</div>
+                  <div class="tag success text-cyan-success text-12">Goalkeeper</div>
+                </div>
+              </div>
+              <div class="d-flex p-12 justify-content-center align-items-center radius-5 bg-custom-error border-btn-success">
+                <div class="text-16 text-cyan-error">In Completed</div>
+              </div>
+            </div>
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
+              <div class="d-flex gap-12 align-items-center">
+                <img src="./assets/svg/user5.svg">
+                <div class="d-flex flex-column gap-8">
+                  <div class="text-20">Jacob Carney</div>
+                  <div class="tag success text-cyan-success text-12">Goalkeeper</div>
+                </div>
+              </div>
+              <div class="d-flex p-12 justify-content-center align-items-center radius-5 bg-custom-error border-btn-success">
+                <div class="text-16 text-cyan-error">In Completed</div>
+              </div>
+            </div>
+            <div class="d-flex p-12 justify-content-between align-items-center radius-12 bg-custom-gradient-primary align-self-stretch">
+              <div class="d-flex gap-12 align-items-center">
+                <img src="./assets/svg/user6.svg">
+                <div class="d-flex flex-column gap-8">
+                  <div class="text-20">Jacob Carney</div>
+                  <div class="tag success text-cyan-success text-12">Goalkeeper</div>
+                </div>
+              </div>
+              <div class="d-flex p-12 justify-content-center align-items-center radius-5 bg-custom-success border-btn-success">
+                <div class="text-16 text-cyan-success">Completed</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Wellness Survey Modal Type 2 -->
+  <div class="modal" id="wellness-survey-modal2">
+    <div class="w-100 h-100 position-relative">
+      <button type="button" class="btn-close d-flex position-absolute align-items-center justify-content-center max-w-56 max-height-56 p-18 radius-100 border-tab-empty top-40 end-40" data-bs-dismiss="modal">
+				<img src="./assets/svg/icon-white-close.svg" class="w-20 h-20" alt="Modal Close Icon">
+			</button>
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content d-flex flex-column w-960 h-100 gap-40 p-40">
+          <div class="d-flex align-items-center align-self-stretch justify-content-between">
+            <div class="d-flex flex-column gap-12 justify-content-between align-items-start">
+              <div class="text-32">Wellness Survey</div>
+              <div class="text-14 text-neutral">25/11 - 08:30</div>
+            </div>
+            <div class="d-flex p-8 align-items-center gap-20">
+              <div class="d-flex gap-12 align-items-center">
+                <img src="./assets/png/avatar-jacob-2-bigger.png">
+                <div class="text-16">Nick Townsend</div>
+              </div>
+              <div class="d-flex p-6 justify-content-center align-items-center gap-10 bg-custom-success radius-5 border-btn-success">
+                <div class="text-12 text-cyan-success">Completed</div>
+              </div>
+            </div>
+          </div>
+            
+          <div class="d-flex gap-12 align-items-start align-self-stretch">
+            <div class="d-flex flex-1-0-0 gap-20 flex-column p-20 align-items-start align-self-stretch flex-grow-1 radius-12 custom-card bg-white">
+              <div class="d-flex flex-column justify-content-center align-items-center radius-8 bg-mini-card-cyan-success min-w-42 min-height-42">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                  <path d="M8.02539 2.72852L8.31543 2.75488C8.86888 2.80616 9.2092 2.98819 9.42285 3.21484C9.56926 3.37027 9.68412 3.57824 9.75684 3.84766H2.24316C2.31588 3.57821 2.43073 3.37028 2.57715 3.21484C2.79077 2.98817 3.13116 2.8062 3.68457 2.75488L3.97461 2.72852H8.02539Z" fill="#73A8A1" stroke="#73A8A1" stroke-width="1.3"/>
+                  <path d="M10 5.25H2C1.725 5.25 1.5 5.475 1.5 5.75V8.83C1.5 10.33 2.25 11.33 4 11.33H8C9.75 11.33 10.5 10.33 10.5 8.83V5.75C10.5 5.475 10.275 5.25 10 5.25ZM4.605 9.435C4.555 9.48 4.5 9.515 4.44 9.54C4.38 9.565 4.315 9.58 4.25 9.58C4.185 9.58 4.12 9.565 4.06 9.54C4 9.515 3.945 9.48 3.895 9.435C3.805 9.34 3.75 9.21 3.75 9.08C3.75 8.95 3.805 8.82 3.895 8.725C3.945 8.68 4 8.645 4.06 8.62C4.18 8.57 4.32 8.57 4.44 8.62C4.5 8.645 4.555 8.68 4.605 8.725C4.695 8.82 4.75 8.95 4.75 9.08C4.75 9.21 4.695 9.34 4.605 9.435ZM4.71 7.52C4.685 7.58 4.65 7.635 4.605 7.685C4.555 7.73 4.5 7.765 4.44 7.79C4.38 7.815 4.315 7.83 4.25 7.83C4.185 7.83 4.12 7.815 4.06 7.79C4 7.765 3.945 7.73 3.895 7.685C3.85 7.635 3.815 7.58 3.79 7.52C3.765 7.46 3.75 7.395 3.75 7.33C3.75 7.265 3.765 7.2 3.79 7.14C3.815 7.08 3.85 7.025 3.895 6.975C3.945 6.93 4 6.895 4.06 6.87C4.18 6.82 4.32 6.82 4.44 6.87C4.5 6.895 4.555 6.93 4.605 6.975C4.65 7.025 4.685 7.08 4.71 7.14C4.735 7.2 4.75 7.265 4.75 7.33C4.75 7.395 4.735 7.46 4.71 7.52ZM6.355 7.685C6.305 7.73 6.25 7.765 6.19 7.79C6.13 7.815 6.065 7.83 6 7.83C5.935 7.83 5.87 7.815 5.81 7.79C5.75 7.765 5.695 7.73 5.645 7.685C5.555 7.59 5.5 7.46 5.5 7.33C5.5 7.2 5.555 7.07 5.645 6.975C5.695 6.93 5.75 6.895 5.81 6.87C5.93 6.815 6.07 6.815 6.19 6.87C6.25 6.895 6.305 6.93 6.355 6.975C6.445 7.07 6.5 7.2 6.5 7.33C6.5 7.46 6.445 7.59 6.355 7.685Z" fill="#73A8A1"/>
+                </svg>
+              </div>
+              <div class="d-flex flex-column gap-12 justify-content-center align-items-start">
+                <div class="text-14 opacity-0-5 text-black">Hours of Sleep</div>
+                <div class="text-40">7 hours</div>
+              </div>
+            </div>
+            <div class="d-flex flex-1-0-0 gap-20 flex-column p-20 align-items-start align-self-stretch flex-grow-1 radius-12 custom-card bg-white">
+              <div class="d-flex flex-column justify-content-center align-items-center radius-8 bg-mini-card-cyan-success min-w-42 min-height-42">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                  <path d="M8.02539 2.72852L8.31543 2.75488C8.86888 2.80616 9.2092 2.98819 9.42285 3.21484C9.56926 3.37027 9.68412 3.57824 9.75684 3.84766H2.24316C2.31588 3.57821 2.43073 3.37028 2.57715 3.21484C2.79077 2.98817 3.13116 2.8062 3.68457 2.75488L3.97461 2.72852H8.02539Z" fill="#73A8A1" stroke="#73A8A1" stroke-width="1.3"/>
+                  <path d="M10 5.25H2C1.725 5.25 1.5 5.475 1.5 5.75V8.83C1.5 10.33 2.25 11.33 4 11.33H8C9.75 11.33 10.5 10.33 10.5 8.83V5.75C10.5 5.475 10.275 5.25 10 5.25ZM4.605 9.435C4.555 9.48 4.5 9.515 4.44 9.54C4.38 9.565 4.315 9.58 4.25 9.58C4.185 9.58 4.12 9.565 4.06 9.54C4 9.515 3.945 9.48 3.895 9.435C3.805 9.34 3.75 9.21 3.75 9.08C3.75 8.95 3.805 8.82 3.895 8.725C3.945 8.68 4 8.645 4.06 8.62C4.18 8.57 4.32 8.57 4.44 8.62C4.5 8.645 4.555 8.68 4.605 8.725C4.695 8.82 4.75 8.95 4.75 9.08C4.75 9.21 4.695 9.34 4.605 9.435ZM4.71 7.52C4.685 7.58 4.65 7.635 4.605 7.685C4.555 7.73 4.5 7.765 4.44 7.79C4.38 7.815 4.315 7.83 4.25 7.83C4.185 7.83 4.12 7.815 4.06 7.79C4 7.765 3.945 7.73 3.895 7.685C3.85 7.635 3.815 7.58 3.79 7.52C3.765 7.46 3.75 7.395 3.75 7.33C3.75 7.265 3.765 7.2 3.79 7.14C3.815 7.08 3.85 7.025 3.895 6.975C3.945 6.93 4 6.895 4.06 6.87C4.18 6.82 4.32 6.82 4.44 6.87C4.5 6.895 4.555 6.93 4.605 6.975C4.65 7.025 4.685 7.08 4.71 7.14C4.735 7.2 4.75 7.265 4.75 7.33C4.75 7.395 4.735 7.46 4.71 7.52ZM6.355 7.685C6.305 7.73 6.25 7.765 6.19 7.79C6.13 7.815 6.065 7.83 6 7.83C5.935 7.83 5.87 7.815 5.81 7.79C5.75 7.765 5.695 7.73 5.645 7.685C5.555 7.59 5.5 7.46 5.5 7.33C5.5 7.2 5.555 7.07 5.645 6.975C5.695 6.93 5.75 6.895 5.81 6.87C5.93 6.815 6.07 6.815 6.19 6.87C6.25 6.895 6.305 6.93 6.355 6.975C6.445 7.07 6.5 7.2 6.5 7.33C6.5 7.46 6.445 7.59 6.355 7.685Z" fill="#73A8A1"/>
+                </svg>
+              </div>
+              <div class="d-flex flex-column gap-12 justify-content-center align-items-start">
+                <div class="text-14 opacity-0-5 text-black">Which areas did you train today?</div>
+                <div class="d-flex flex-wrap align-self-stretch align-items-start gap-2px align-content-start">
+                  <div class="d-flex p-6 align-items-center justify-content-center gap-10 bg-custom-success border-btn-success radius-5">
+                    <div class="text-12 text-cyan-success">Strength</div>
+                  </div>
+                  <div class="d-flex p-6 align-items-center justify-content-center gap-10 bg-custom-success border-btn-success radius-5">
+                    <div class="text-12 text-cyan-success">Endurance</div>
+                  </div>
+                  <div class="d-flex p-6 align-items-center justify-content-center gap-10 bg-custom-success border-btn-success radius-5">
+                    <div class="text-12 text-cyan-success">Technical Skills</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="d-flex flex-1-0-0 gap-20 flex-column p-20 align-items-start align-self-stretch flex-grow-1 radius-12 custom-card bg-white">
+              <div class="d-flex flex-column justify-content-center align-items-center radius-8 bg-mini-card-cyan-success min-w-42 min-height-42">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                  <path d="M8.02539 2.72852L8.31543 2.75488C8.86888 2.80616 9.2092 2.98819 9.42285 3.21484C9.56926 3.37027 9.68412 3.57824 9.75684 3.84766H2.24316C2.31588 3.57821 2.43073 3.37028 2.57715 3.21484C2.79077 2.98817 3.13116 2.8062 3.68457 2.75488L3.97461 2.72852H8.02539Z" fill="#73A8A1" stroke="#73A8A1" stroke-width="1.3"/>
+                  <path d="M10 5.25H2C1.725 5.25 1.5 5.475 1.5 5.75V8.83C1.5 10.33 2.25 11.33 4 11.33H8C9.75 11.33 10.5 10.33 10.5 8.83V5.75C10.5 5.475 10.275 5.25 10 5.25ZM4.605 9.435C4.555 9.48 4.5 9.515 4.44 9.54C4.38 9.565 4.315 9.58 4.25 9.58C4.185 9.58 4.12 9.565 4.06 9.54C4 9.515 3.945 9.48 3.895 9.435C3.805 9.34 3.75 9.21 3.75 9.08C3.75 8.95 3.805 8.82 3.895 8.725C3.945 8.68 4 8.645 4.06 8.62C4.18 8.57 4.32 8.57 4.44 8.62C4.5 8.645 4.555 8.68 4.605 8.725C4.695 8.82 4.75 8.95 4.75 9.08C4.75 9.21 4.695 9.34 4.605 9.435ZM4.71 7.52C4.685 7.58 4.65 7.635 4.605 7.685C4.555 7.73 4.5 7.765 4.44 7.79C4.38 7.815 4.315 7.83 4.25 7.83C4.185 7.83 4.12 7.815 4.06 7.79C4 7.765 3.945 7.73 3.895 7.685C3.85 7.635 3.815 7.58 3.79 7.52C3.765 7.46 3.75 7.395 3.75 7.33C3.75 7.265 3.765 7.2 3.79 7.14C3.815 7.08 3.85 7.025 3.895 6.975C3.945 6.93 4 6.895 4.06 6.87C4.18 6.82 4.32 6.82 4.44 6.87C4.5 6.895 4.555 6.93 4.605 6.975C4.65 7.025 4.685 7.08 4.71 7.14C4.735 7.2 4.75 7.265 4.75 7.33C4.75 7.395 4.735 7.46 4.71 7.52ZM6.355 7.685C6.305 7.73 6.25 7.765 6.19 7.79C6.13 7.815 6.065 7.83 6 7.83C5.935 7.83 5.87 7.815 5.81 7.79C5.75 7.765 5.695 7.73 5.645 7.685C5.555 7.59 5.5 7.46 5.5 7.33C5.5 7.2 5.555 7.07 5.645 6.975C5.695 6.93 5.75 6.895 5.81 6.87C5.93 6.815 6.07 6.815 6.19 6.87C6.25 6.895 6.305 6.93 6.355 6.975C6.445 7.07 6.5 7.2 6.5 7.33C6.5 7.46 6.445 7.59 6.355 7.685Z" fill="#73A8A1"/>
+                </svg>
+              </div>
+              <div class="d-flex flex-column gap-12 justify-content-center align-items-start">
+                <div class="text-14 opacity-0-5 text-black">How was your overall match performance?</div>
+                <div class="d-flex p-6 align-items-center justify-content-center gap-10 bg-custom-success border-btn-success radius-5">
+                    <div class="text-12 text-cyan-success">Met expectations</div>
+                  </div>
+              </div>
+            </div>
+            <div class="d-flex max-w-211 flex-1-0-0 gap-20 flex-column p-20 align-items-start align-self-stretch flex-grow-1 radius-12 custom-card bg-white">
+              <div class="d-flex flex-column justify-content-center align-items-center radius-8 bg-mini-card-cyan-success min-w-42 min-height-42">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                  <path d="M8.02539 2.72852L8.31543 2.75488C8.86888 2.80616 9.2092 2.98819 9.42285 3.21484C9.56926 3.37027 9.68412 3.57824 9.75684 3.84766H2.24316C2.31588 3.57821 2.43073 3.37028 2.57715 3.21484C2.79077 2.98817 3.13116 2.8062 3.68457 2.75488L3.97461 2.72852H8.02539Z" fill="#73A8A1" stroke="#73A8A1" stroke-width="1.3"/>
+                  <path d="M10 5.25H2C1.725 5.25 1.5 5.475 1.5 5.75V8.83C1.5 10.33 2.25 11.33 4 11.33H8C9.75 11.33 10.5 10.33 10.5 8.83V5.75C10.5 5.475 10.275 5.25 10 5.25ZM4.605 9.435C4.555 9.48 4.5 9.515 4.44 9.54C4.38 9.565 4.315 9.58 4.25 9.58C4.185 9.58 4.12 9.565 4.06 9.54C4 9.515 3.945 9.48 3.895 9.435C3.805 9.34 3.75 9.21 3.75 9.08C3.75 8.95 3.805 8.82 3.895 8.725C3.945 8.68 4 8.645 4.06 8.62C4.18 8.57 4.32 8.57 4.44 8.62C4.5 8.645 4.555 8.68 4.605 8.725C4.695 8.82 4.75 8.95 4.75 9.08C4.75 9.21 4.695 9.34 4.605 9.435ZM4.71 7.52C4.685 7.58 4.65 7.635 4.605 7.685C4.555 7.73 4.5 7.765 4.44 7.79C4.38 7.815 4.315 7.83 4.25 7.83C4.185 7.83 4.12 7.815 4.06 7.79C4 7.765 3.945 7.73 3.895 7.685C3.85 7.635 3.815 7.58 3.79 7.52C3.765 7.46 3.75 7.395 3.75 7.33C3.75 7.265 3.765 7.2 3.79 7.14C3.815 7.08 3.85 7.025 3.895 6.975C3.945 6.93 4 6.895 4.06 6.87C4.18 6.82 4.32 6.82 4.44 6.87C4.5 6.895 4.555 6.93 4.605 6.975C4.65 7.025 4.685 7.08 4.71 7.14C4.735 7.2 4.75 7.265 4.75 7.33C4.75 7.395 4.735 7.46 4.71 7.52ZM6.355 7.685C6.305 7.73 6.25 7.765 6.19 7.79C6.13 7.815 6.065 7.83 6 7.83C5.935 7.83 5.87 7.815 5.81 7.79C5.75 7.765 5.695 7.73 5.645 7.685C5.555 7.59 5.5 7.46 5.5 7.33C5.5 7.2 5.555 7.07 5.645 6.975C5.695 6.93 5.75 6.895 5.81 6.87C5.93 6.815 6.07 6.815 6.19 6.87C6.25 6.895 6.305 6.93 6.355 6.975C6.445 7.07 6.5 7.2 6.5 7.33C6.5 7.46 6.445 7.59 6.355 7.685Z" fill="#73A8A1"/>
+                </svg>
+              </div>
+              <div class="d-flex flex-column gap-12 justify-content-center align-items-start">
+                <div class="text-14 opacity-0-5 text-black">Energy Level</div>
+                <div class="d-flex align-items-end">
+                  <div class="text-40">6</div>
+                  <div class="text-20 text-neutral">/10</div>
+                </div>
+              </div>
+            </div>
+          </div>
+            
+          <div class="d-flex gap-12 align-items-start align-self-stretch">
+            <div class="d-flex flex-1-0-0 gap-20 flex-column p-20 align-items-start align-self-stretch flex-grow-1 radius-12 custom-card bg-white">
+              <div class="d-flex flex-column justify-content-center align-items-center radius-8 bg-mini-card-cyan-success min-w-42 min-height-42">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                  <path d="M8.02539 2.72852L8.31543 2.75488C8.86888 2.80616 9.2092 2.98819 9.42285 3.21484C9.56926 3.37027 9.68412 3.57824 9.75684 3.84766H2.24316C2.31588 3.57821 2.43073 3.37028 2.57715 3.21484C2.79077 2.98817 3.13116 2.8062 3.68457 2.75488L3.97461 2.72852H8.02539Z" fill="#73A8A1" stroke="#73A8A1" stroke-width="1.3"/>
+                  <path d="M10 5.25H2C1.725 5.25 1.5 5.475 1.5 5.75V8.83C1.5 10.33 2.25 11.33 4 11.33H8C9.75 11.33 10.5 10.33 10.5 8.83V5.75C10.5 5.475 10.275 5.25 10 5.25ZM4.605 9.435C4.555 9.48 4.5 9.515 4.44 9.54C4.38 9.565 4.315 9.58 4.25 9.58C4.185 9.58 4.12 9.565 4.06 9.54C4 9.515 3.945 9.48 3.895 9.435C3.805 9.34 3.75 9.21 3.75 9.08C3.75 8.95 3.805 8.82 3.895 8.725C3.945 8.68 4 8.645 4.06 8.62C4.18 8.57 4.32 8.57 4.44 8.62C4.5 8.645 4.555 8.68 4.605 8.725C4.695 8.82 4.75 8.95 4.75 9.08C4.75 9.21 4.695 9.34 4.605 9.435ZM4.71 7.52C4.685 7.58 4.65 7.635 4.605 7.685C4.555 7.73 4.5 7.765 4.44 7.79C4.38 7.815 4.315 7.83 4.25 7.83C4.185 7.83 4.12 7.815 4.06 7.79C4 7.765 3.945 7.73 3.895 7.685C3.85 7.635 3.815 7.58 3.79 7.52C3.765 7.46 3.75 7.395 3.75 7.33C3.75 7.265 3.765 7.2 3.79 7.14C3.815 7.08 3.85 7.025 3.895 6.975C3.945 6.93 4 6.895 4.06 6.87C4.18 6.82 4.32 6.82 4.44 6.87C4.5 6.895 4.555 6.93 4.605 6.975C4.65 7.025 4.685 7.08 4.71 7.14C4.735 7.2 4.75 7.265 4.75 7.33C4.75 7.395 4.735 7.46 4.71 7.52ZM6.355 7.685C6.305 7.73 6.25 7.765 6.19 7.79C6.13 7.815 6.065 7.83 6 7.83C5.935 7.83 5.87 7.815 5.81 7.79C5.75 7.765 5.695 7.73 5.645 7.685C5.555 7.59 5.5 7.46 5.5 7.33C5.5 7.2 5.555 7.07 5.645 6.975C5.695 6.93 5.75 6.895 5.81 6.87C5.93 6.815 6.07 6.815 6.19 6.87C6.25 6.895 6.305 6.93 6.355 6.975C6.445 7.07 6.5 7.2 6.5 7.33C6.5 7.46 6.445 7.59 6.355 7.685Z" fill="#73A8A1"/>
+                </svg>
+              </div>
+              <div class="d-flex flex-column gap-12 justify-content-center align-items-start">
+                <div class="text-16">Additional comments about today's training</div>
+                <div class="text-14 text-light-gray">Felt good overall but had some minor discomfort in my shoulder during strength exercises. Will ice it tonight as a precaution. Technical drills went really well, particularly the passing accuracy session.</div>
+              </div>
+            </div>
+            <div class="d-flex max-w-211 gap-20 flex-column p-20 align-items-start align-self-stretch flex-grow-1 radius-12 custom-card bg-white">
+              <div class="d-flex flex-column justify-content-center align-items-center radius-8 bg-mini-card-cyan-success min-w-42 min-height-42">
+                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                  <path d="M8.02539 2.72852L8.31543 2.75488C8.86888 2.80616 9.2092 2.98819 9.42285 3.21484C9.56926 3.37027 9.68412 3.57824 9.75684 3.84766H2.24316C2.31588 3.57821 2.43073 3.37028 2.57715 3.21484C2.79077 2.98817 3.13116 2.8062 3.68457 2.75488L3.97461 2.72852H8.02539Z" fill="#73A8A1" stroke="#73A8A1" stroke-width="1.3"/>
+                  <path d="M10 5.25H2C1.725 5.25 1.5 5.475 1.5 5.75V8.83C1.5 10.33 2.25 11.33 4 11.33H8C9.75 11.33 10.5 10.33 10.5 8.83V5.75C10.5 5.475 10.275 5.25 10 5.25ZM4.605 9.435C4.555 9.48 4.5 9.515 4.44 9.54C4.38 9.565 4.315 9.58 4.25 9.58C4.185 9.58 4.12 9.565 4.06 9.54C4 9.515 3.945 9.48 3.895 9.435C3.805 9.34 3.75 9.21 3.75 9.08C3.75 8.95 3.805 8.82 3.895 8.725C3.945 8.68 4 8.645 4.06 8.62C4.18 8.57 4.32 8.57 4.44 8.62C4.5 8.645 4.555 8.68 4.605 8.725C4.695 8.82 4.75 8.95 4.75 9.08C4.75 9.21 4.695 9.34 4.605 9.435ZM4.71 7.52C4.685 7.58 4.65 7.635 4.605 7.685C4.555 7.73 4.5 7.765 4.44 7.79C4.38 7.815 4.315 7.83 4.25 7.83C4.185 7.83 4.12 7.815 4.06 7.79C4 7.765 3.945 7.73 3.895 7.685C3.85 7.635 3.815 7.58 3.79 7.52C3.765 7.46 3.75 7.395 3.75 7.33C3.75 7.265 3.765 7.2 3.79 7.14C3.815 7.08 3.85 7.025 3.895 6.975C3.945 6.93 4 6.895 4.06 6.87C4.18 6.82 4.32 6.82 4.44 6.87C4.5 6.895 4.555 6.93 4.605 6.975C4.65 7.025 4.685 7.08 4.71 7.14C4.735 7.2 4.75 7.265 4.75 7.33C4.75 7.395 4.735 7.46 4.71 7.52ZM6.355 7.685C6.305 7.73 6.25 7.765 6.19 7.79C6.13 7.815 6.065 7.83 6 7.83C5.935 7.83 5.87 7.815 5.81 7.79C5.75 7.765 5.695 7.73 5.645 7.685C5.555 7.59 5.5 7.46 5.5 7.33C5.5 7.2 5.555 7.07 5.645 6.975C5.695 6.93 5.75 6.895 5.81 6.87C5.93 6.815 6.07 6.815 6.19 6.87C6.25 6.895 6.305 6.93 6.355 6.975C6.445 7.07 6.5 7.2 6.5 7.33C6.5 7.46 6.445 7.59 6.355 7.685Z" fill="#73A8A1"/>
+                </svg>
+              </div>
+              <div class="d-flex flex-column gap-12 justify-content-center align-items-start">
+                <div class="text-14 opacity-0-5 text-black">Recovery Status</div>
+                <div class="d-flex align-items-end">
+									<span class="fw-medium text-40 line-height-100">3</span>
+									<span class="fw-medium text-20 line-height-100 text-neutral">/5</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="text-20">Injury Report</div>
+          <div class="d-flex flex-row align-items-center justify-content-between gap-40">
+  					<div class="d-flex flex-row align-items-center gap-89">
+  					  <div class="d-flex align-items-center justify-content-center">
+  						  <div class="d-flex flex-column justify-content-center align-items-center gap-26 position-relative">
+  							  <span class="fw-medium text-16">Front</span>
+  				  			<img src="./assets/png/front.png" class="max-w-159 max-height-421" alt="Front Image">
+  				  			<span class="outer-circle type1" >
+  				  			 <span class="inner-circle">1</span>
+  				  			</span>
+  				  			<span class="outer-circle type2" >
+  				  			 <span class="inner-circle">2</span>
+  				  			</span>
+  							</div>
+  						</div>
+  						<div class="d-flex align-items-center justify-content-center">
+  							<div class="d-flex flex-column justify-content-center align-items-center gap-26 position-relative">
+  								<span class="fw-medium text-16">Back</span>
+  								<img src="./assets/png/back.png" class="max-w-159 max-height-421" alt="Front Image">
+  				  			<span class="outer-circle type3" >
+  				  			 <span class="inner-circle">3</span>
+  				  			</span>
+  							</div>
+  						</div>
+  					</div>
+  					<div class="d-flex flex-column align-items-center custom-card min-w-380 p-20 gap-20 radius-20">
+  						<span class="fw-medium text-20 text-custom-primary">Pain Score</span>
+  						<div class="d-flex align-items-center justify-content-center position-relative max-height-160">
+  							<div id="raidal-bar-chart"></div>
+  							<span class="fw-medium position-absolute text-12 line-height-100 text-cyan-gray left-75 bottom-0">0</span>
+  							<span class="fw-medium position-absolute text-12 line-height-100 text-cyan-gray left-120 top-50-px">3</span>
+  							<span class="fw-medium position-absolute text-12 line-height-100 text-cyan-gray top-8">5</span>
+  							<span class="fw-medium position-absolute text-12 line-height-100 text-cyan-gray end-120 top-50-px">7</span>
+  							<span class="fw-medium position-absolute text-12 line-height-100 text-cyan-gray end-70 bottom-0">10</span>
+  							<div class="d-flex flex-column position-absolute bottom-0 gap-12">
+  								<div class="d-flex align-items-baseline justify-content-center">
+  									<span class="fw-medium text-40 line-height-100">7</span>
+  									<span class="fw-medium text-20 line-height-100 text-neutral">/10</span>
+  								</div>
+  								<span class="fw-medium text-20 line-height-100">Pain Level</span>
+  							</div>
+  							<div id="needle-container" class="needle-container">
+  								<div id="needle"></div>
+  							</div>
+  						</div>
+  						<div class="d-flex p-12 gap-20 flex-column align-self-stretch align-items-start">
+  							<label class="fw-medium text-16">Notes</label>
+  							<p class="text-14 text-light-gray">Lorem ipsum dolor sit amet consectetur. Dictum amet enim urna suspendisse. Lacinia scelerisque arcu morbi quis odio. Integer diam elementum sed euismod sapien. Feugiat sed et elit condimentum. Pulvinar placerat ultrices urna elementum. Vitae in vitae faucibus et luctus dapibus. Mattis erat at dictumst.</p>
+  						</div>
+  					</div>
+  				</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Custom JS dependencies -->
+  <script src="./assets/js/sidebar.js"></script>
+  <script src="./assets/js/bootstrap-select.js"></script>
+	<script src="./assets/js/bar-radial-apexchart.js"></script>
+</body>
+
+</html>

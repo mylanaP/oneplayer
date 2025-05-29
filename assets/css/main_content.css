@@ -1,5 +1,6 @@
 .main-content-container {
   background-color: #F8F8FC;
+  width: -webkit-fill-available;
 }
 
 .header-icon-container {

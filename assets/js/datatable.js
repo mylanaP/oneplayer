@@ -18,4 +18,42 @@ $(document).ready(function () {
         ordering: true,
         responsive: true
     });
+
+    $('.ecg-modal-table').DataTable({
+        columnDefs: [
+            { targets: 2, orderable: false },
+            { targets: 3, orderable: false }
+        ],
+        paging: false,
+        searching: false,
+        info: false,
+        ordering: true,
+        responsive: true
+    });
+
+    $('.phase-library-table').DataTable({
+        columnDefs: [
+            { targets: 2, orderable: false },
+            { targets: 3, orderable: false },
+            { targets: 4, orderable: false }
+        ],
+        paging: false,
+        searching: false,
+        info: false,
+        ordering: true,
+        responsive: true
+    });
+
+    $('.session-library-table').DataTable({
+        columnDefs: [
+            { targets: 2, orderable: false },
+            { targets: 3, orderable: false },
+            { targets: 4, orderable: false }
+        ],
+        paging: false,
+        searching: false,
+        info: false,
+        ordering: true,
+        responsive: true
+    });
 });
